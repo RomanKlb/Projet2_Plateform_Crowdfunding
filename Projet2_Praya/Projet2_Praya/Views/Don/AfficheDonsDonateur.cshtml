@@ -1,0 +1,60 @@
+﻿@model List<Projet2_Praya.ViewModels.AfficherDonViewModel>
+@{
+    ViewBag.Title = "Affiche les Dons du Donateur";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-8"></div>
+        <div class="col-4">
+            <br />
+            <a class="bouton" href="/Accueil/Index">Retour Accueil</a>
+        </div>
+    </div>
+</div>
+
+
+
+<section>
+    <div class="m-md-2" id="videPetit">
+        <h2>
+            Liste de vos Dons
+        </h2>
+        
+    </div>
+</section>
+<div class="p-md-4"></div>
+<div class="container">
+    <div><h3>Votre portefeuille de factures</h3></div>
+    <table class="table">
+        <thead class="thead-light">
+            <tr>
+                <th>Libellé</th>
+                <th>E-Mail</th>
+                <th>Montant</th>
+                <th>Date de la facture</th>
+            </tr>
+        </thead>
+        @{foreach (var item in Model)
+            {
+                <tbody>
+                    <tr>
+                        <td>@item.libelle</td>
+                        <td>@item.email</td>
+                        <td>@item.montant</td>
+                        <td>@item.date_facture</td>
+                    </tr>
+                </tbody>
+            }
+        }
+    </table>
+</div>
+
+<div class="vide"></div>
+</body>
+@section footerstyle{
+    .footerstyle{position:fixed;bottom:0px;width:100%}
+}
+

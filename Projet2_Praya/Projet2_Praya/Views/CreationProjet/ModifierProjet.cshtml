@@ -1,0 +1,170 @@
+﻿@model Projet2_Praya.Models.projet
+@{
+    ViewBag.Title = "Modifier le projet";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-8"></div>
+        <div class="col-4">
+            <br />
+        </div>
+    </div>
+</div>
+
+
+
+<section>
+    <div class="m-md-2" id="videPetit">
+        <h2>
+            Formulaire de création de projet
+        </h2>
+    </div>
+    <div class="m-md-2" id="videPetit">
+        <h4>Modifier les informations de votre Projet</h4>
+    </div>
+</section>
+
+
+
+
+@using (Html.BeginForm())
+{
+
+    <div style="display:none">
+        @Html.TextBoxFor(model => model.id_projet)
+    </div>
+
+
+
+    <div class="p-md-4"></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-2">
+                <div class="row justify-content-end">
+                    <label>Nom du Projet</label>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="row justify-content-center">
+
+                    @Html.TextBoxFor(m => m.libelle)
+                    @Html.ValidationMessageFor(m => m.libelle, "", new { @style = "color:red;" })
+
+                </div>
+            </div>
+            <div class="col-5"></div>
+
+            <div class="col-3"></div>
+            <div class="col-2">
+                <div class="row justify-content-end">
+                    <label>
+                        @{
+                            ViewBag.Title = "Selectionnez votre type";
+
+                        }
+                        Type de Projet
+                    </label>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="row justify-content-center">
+                    <div class="w-100"></div>
+
+                    @Html.DropDownListFor(m => m.type_du_projet, new SelectList(ViewBag.TypesProjet, "Value", "Text"), "Selectionnez Le Type")
+                    @Html.ValidationMessageFor(m => m.type_du_projet, "", new { @style = "color:red;" })
+
+                </div>
+            </div>
+            <div class="col-5"></div>
+
+            <div class="col-3"></div>
+            <div class="col-2">
+                <div class="row justify-content-end">
+                    <label>Cagnotte Souhaitée</label>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="row justify-content-center">
+                    <div class="w-100"></div>
+
+                    @*@Html.TextBoxFor(m => m.montant_attendu, new { @type = "number", @Value = Model.montant_attendu.ToString("0.00") })*@
+                    @Html.TextBoxFor(m => m.montant_attendu)
+                    @Html.ValidationMessageFor(m => m.montant_attendu, "", new { @style = "color:red;" })
+                        </div>
+                    </div>
+                    <div class="col-5"></div>
+
+                    <div class="col-3"></div>
+                    <div class="col-2">
+                        <div class="row justify-content-end">
+                            <label>Date Butoir Collecte</label>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="row justify-content-center">
+                            <div class="w-100"></div>
+
+                            @Html.TextBoxFor(m => m.date_butoir, new { @type = "date", @Value = Model.date_butoir.ToString("yyyy-MM-dd") })
+
+                        </div>
+                    </div>
+                    <div class="col-5"></div>
+
+                    <div class="col-3"></div>
+                    <div class="col-2">
+                        <div class="row justify-content-end">
+                            <label>Date Debut de Projet</label>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="row justify-content-center">
+                            <div class="w-100"></div>
+
+                            @Html.TextBoxFor(m => m.date_debut, new { @type = "date", @Value = Model.date_debut.ToString("yyyy-MM-dd") })
+
+                        </div>
+                    </div>
+                    <div class="col-5"></div>
+
+                    <div class="col-3"></div>
+                    <div class="col-2">
+                        <div class="row justify-content-end">
+                            <label>Description du Projet</label>
+                        </div>
+                    </div>
+                    <div class="col-2"></div>
+                    <div class="col-5"></div>
+
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-2"></div>
+                            <div class="col-8">
+                                @Html.TextAreaFor(m => m.description, new { @rows = "50", @style = "height:400px; resize:vertical;" })
+                                @Html.ValidationMessageFor(m => m.description, "", new { @style = "color:red;" })
+                            </div>
+                            <div class="col-2"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <br />
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-5"></div>
+                    <div class="col-2">
+                        <div class="row justify-content-center">
+                            <input class="boutonInput" type="submit" value="Enregistrez les modifications" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-5"></div>
+            </div>
+
+        }
+        <div class="vide"></div>
+

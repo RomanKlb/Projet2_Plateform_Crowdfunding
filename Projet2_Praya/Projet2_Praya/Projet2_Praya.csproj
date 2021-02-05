@@ -1,0 +1,352 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3C0ACF21-3CDC-4D7E-96FD-CB2C24F7B422}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Projet2_Praya</RootNamespace>
+    <AssemblyName>Projet2_Praya</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data, Version=6.9.10.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 6.9.10\Assemblies\v4.5\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.Entity.EF6, Version=6.9.10.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 6.9.10\Assemblies\v4.5\MySql.Data.Entity.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList.Mvc, Version=4.5.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.4\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.4\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.4\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.4\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.4\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.4\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Images\coeurRogner.jpg" />
+    <Content Include="Content\Images\dieu.jpg" />
+    <Content Include="Content\Images\facebook.png" />
+    <Content Include="Content\Images\flecheblanchedroite.png" />
+    <Content Include="Content\Images\Ilot_prayaCarousel.jpg" />
+    <Content Include="Content\Images\Ilot_prayaLarge.jpg" />
+    <Content Include="Content\Images\instagram.jpg" />
+    <Content Include="Content\Images\JJr.jpg" />
+    <Content Include="Content\Images\Logo_Instagram.png" />
+    <Content Include="Content\Images\Logo_praya_fond0.png" />
+    <Content Include="Content\Images\Najat.jpg" />
+    <Content Include="Content\Images\paiement_association.png" />
+    <Content Include="Content\Images\Pierre.jpg" />
+    <Content Include="Content\Images\Thomas.jpg" />
+    <Content Include="Content\Images\tortue.jpg" />
+    <Content Include="Content\bootstrap.bundle.js" />
+    <Content Include="Content\Images\waouvacances.jpg" />
+    <Content Include="Content\Styles_5\bootstrap.css" />
+    <Content Include="Content\Styles\bootstrap.css" />
+    <Content Include="Content\Styles\Carouselbis.css" />
+    <Content Include="Content\Styles\CarouselEasy.css" />
+    <Content Include="Content\Styles\Don.css" />
+    <Content Include="Content\Styles\style.css" />
+    <Content Include="Content\Styles\PagedList.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Models\ModelProjet2.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelProjet2.edmx</DependentUpon>
+      <LastGenOutput>ModelProjet2.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\ModelProjet2.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelProjet2.edmx</DependentUpon>
+      <LastGenOutput>ModelProjet2.cs</LastGenOutput>
+    </Content>
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AccueilController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\CatalogueController.cs" />
+    <Compile Include="Controllers\CreationProjetController.cs" />
+    <Compile Include="Controllers\DonController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\MediaController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\administrateur.cs">
+      <DependentUpon>ModelProjet2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\agendum.cs">
+      <DependentUpon>ModelProjet2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\association.cs">
+      <DependentUpon>ModelProjet2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DalAdmin.cs" />
+    <Compile Include="Models\DalCatalogue.cs" />
+    <Compile Include="Models\DalCreationProjet.cs" />
+    <Compile Include="Models\DalDonProjet.cs" />
+    <Compile Include="Models\DisplayInformationCatalogue.cs" />
+    <Compile Include="Models\DisplayInformationProjet.cs" />
+    <Compile Include="Models\don.cs">
+      <DependentUpon>ModelProjet2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\donateur.cs">
+      <DependentUpon>ModelProjet2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\espace_utilisateur.cs">
+      <DependentUpon>ModelProjet2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\evenement.cs">
+      <DependentUpon>ModelProjet2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\facture.cs">
+      <DependentUpon>ModelProjet2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\IDalAdmin.cs" />
+    <Compile Include="Models\IDalCatalogue.cs" />
+    <Compile Include="Models\IDalCreationProjet.cs" />
+    <Compile Include="Models\IDalDonProjet.cs" />
+    <Compile Include="Models\justificatif.cs">
+      <DependentUpon>ModelProjet2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\medium.cs">
+      <DependentUpon>ModelProjet2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\message.cs">
+      <DependentUpon>ModelProjet2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModelProjet2.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelProjet2.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModelProjet2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelProjet2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModelProjet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelProjet2.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\notification.cs">
+      <DependentUpon>ModelProjet2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\porfefeuille_factures.cs">
+      <DependentUpon>ModelProjet2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\portefeuille_projet.cs">
+      <DependentUpon>ModelProjet2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\preference.cs">
+      <DependentUpon>ModelProjet2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\profil.cs">
+      <DependentUpon>ModelProjet2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\projet.cs">
+      <DependentUpon>ModelProjet2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\rendez_vous.cs">
+      <DependentUpon>ModelProjet2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\resp_projet.cs">
+      <DependentUpon>ModelProjet2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\type_projet.cs">
+      <DependentUpon>ModelProjet2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\utilisateur.cs">
+      <DependentUpon>ModelProjet2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\AdmVueProjets.cs" />
+    <Compile Include="ViewModels\AfficherDonViewModel.cs" />
+    <Compile Include="ViewModels\CataloguePageList.cs" />
+    <Compile Include="ViewModels\CreationProjetViewModel.cs" />
+    <Compile Include="ViewModels\CritRechercheViewModel.cs" />
+    <Compile Include="ViewModels\DetailsInformationProjet.cs" />
+    <Compile Include="ViewModels\DonProjetViewModel.cs" />
+    <Compile Include="ViewModels\ProjetPageListViewModel.cs" />
+    <Compile Include="ViewModels\UtilisateurViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <EntityDeploy Include="Models\ModelProjet2.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelProjet2.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\ModelProjet2.edmx.diagram">
+      <DependentUpon>ModelProjet2.edmx</DependentUpon>
+    </Content>
+    <None Include="packages.config" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Catalogue\Index.cshtml" />
+    <Content Include="Views\Accueil\Index.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Admin\AfficheUtilisateurs.cshtml" />
+    <Content Include="Views\Admin\AjouterUtilisateur.cshtml" />
+    <Content Include="Views\Admin\ModifierUtilisateur.cshtml" />
+    <Content Include="Views\Admin\AfficheTypeProjet.cshtml" />
+    <Content Include="Views\Admin\ModifierTypeProjet.cshtml" />
+    <Content Include="Views\Admin\AjouterTypeProjet.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Login\CreerCompte.cshtml" />
+    <Content Include="Views\Login\ModifierUtilisateur.cshtml" />
+    <Content Include="Views\Shared\Erreur.cshtml" />
+    <Content Include="Views\Shared\ErreurNotAdm.cshtml" />
+    <Content Include="Views\CreationProjet\Index.cshtml" />
+    <Content Include="Views\CreationProjet\CreationProjet.cshtml" />
+    <Content Include="Views\Media\Index.cshtml" />
+    <Content Include="Views\CreationProjet\AfficheUserListProjets.cshtml" />
+    <Content Include="Views\CreationProjet\ModifierProjet.cshtml" />
+    <Content Include="Views\CreationProjet\ModifierAssociation.cshtml" />
+    <Content Include="Views\Admin\AfficheAdminListProjets.cshtml" />
+    <Content Include="Views\Catalogue\VueProjet.cshtml" />
+    <Content Include="Views\Catalogue\SearchProj.cshtml" />
+    <Content Include="Views\Don\Index.cshtml" />
+    <Content Include="Views\Don\AfficheDonsDonateur.cshtml" />
+    <Content Include="Views\Accueil\GestionProjet.cshtml" />
+    <Content Include="Views\Accueil\Don.cshtml" />
+    <Content Include="Views\Accueil\QuiSommesNous.cshtml" />
+    <Content Include="Views\Catalogue\LibSearchProj.cshtml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>53533</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:53533/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Ce projet fait référence à des packages NuGet qui sont manquants sur cet ordinateur. Utilisez l'option de restauration des packages NuGet pour les télécharger. Pour plus d'informations, consultez http://go.microsoft.com/fwlink/?LinkID=322105. Le fichier manquant est : {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

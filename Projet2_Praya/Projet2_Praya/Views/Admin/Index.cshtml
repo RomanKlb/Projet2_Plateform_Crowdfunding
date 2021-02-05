@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewBag.Title = "Page d'administration";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-8"></div>
+            <div class="col-4">
+                Heure du serveur : @ViewBag.curdate.ToString("le dddd dd/MM/yyyy à H:mm:ss")
+            </div>
+        </div>
+    </div>
+    <section>
+        <div class="m-md-2" id="videPetit">
+            <h2>
+                Bienvenue @ViewBag.utilisateur.prenom @ViewBag.utilisateur.nom <br />
+                Vous êtes actuellement sur la page d'accueil administration
+            </h2>
+        </div>
+    </section>
+    <div class="p-md-4"></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-3">
+                <a class="bouton" href="/Admin/AfficheUtilisateurs/">Liste des Utilisateurs</a>
+            </div>
+            <div class="col-3">
+                <a class="bouton" href="/Admin/AfficheTypeProjet/">Liste des Types de projet</a>
+            </div>
+            <div class="col-3">
+                <a class="bouton" href="/Admin/AfficheAdminListProjets/">Liste des Projets</a>
+            </div>
+            <div class="col-2"></div>
+        </div>
+    </div>
+    <div class="vide"></div>
+</body>
+@section footerstyle{
+    .footerstyle{position:fixed;bottom:0px;width:100%}
+}

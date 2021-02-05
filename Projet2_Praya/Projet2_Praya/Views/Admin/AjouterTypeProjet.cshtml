@@ -1,0 +1,91 @@
+﻿@model Projet2_Praya.Models.type_projet
+@{
+    ViewBag.Title = "Création type de projet";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-8"></div>
+            <div class="col-4">
+                <br />
+                <a class="bouton" href="/Admin/Index">Retour Accueil Administrateur</a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <section>
+        <div class="m-md-2" id="videPetit">
+            <h2>
+                Créer un type de projet
+            </h2>
+        </div>
+    </section>
+
+
+
+
+    @using (Html.BeginForm())
+    {
+        <div class="p-md-4"></div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-3"></div>
+                <div class="col-2">
+                    <div class="row justify-content-lg-end">
+                        <label>Type</label>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="row justify-content-center">
+
+                        @Html.TextBoxFor(m => m.type)
+                        @Html.ValidationMessageFor(m => m.type, "", new { @style = "color:red;" })
+
+                    </div>
+                </div>
+                <div class="col-5"></div>
+
+                <div class="col-3"></div>
+                <div class="col-2">
+                    <div class="row justify-content-lg-end">
+                        <label>Libellé</label>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="row justify-content-center">
+                        <div class="w-100"></div>
+
+                        @Html.TextBoxFor(m => m.libelle)
+                        @Html.ValidationMessageFor(m => m.libelle, "", new { @style = "color:red;" })
+
+                    </div>
+                </div>
+                <div class="col-5"></div>
+            </div>
+        </div>
+        <br />
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-5"></div>
+                <div class="col-2">
+                    <div class="row justify-content-center">
+
+                        <input type="submit" value="Créer" />
+
+                    </div>
+                </div>
+                <div class="col-5"></div>
+            </div>
+        </div>
+    }
+
+    <div class="vide"></div>
+</body>
+@section footerstyle{
+    .footerstyle{position:fixed;bottom:0px;width:100%}
+}

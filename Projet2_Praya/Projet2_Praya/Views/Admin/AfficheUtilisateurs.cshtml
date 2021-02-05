@@ -1,0 +1,62 @@
+﻿@model List<Projet2_Praya.Models.utilisateur>
+@{
+    ViewBag.Title = "Liste des utilisateurs";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-8"></div>
+            <div class="col-4">
+                Heure du serveur : @ViewBag.curdate.ToString("le dddd dd/MM/yyyy à H:mm:ss")
+                <br />
+                <a class="bouton" href="/Admin/Index">Retour Accueil Administrateur</a>
+            </div>
+        </div>
+    </div>
+    <section>
+        <div class="m-md-2" id="videPetit">
+            <h2>
+                Liste des utilisateurs
+            </h2>
+            <a class="bouton" href="/Admin/AjouterUtilisateur/">Ajouter Utilisateur</a>
+        </div>
+    </section>
+    <div class="p-md-4"></div>
+
+
+    <div class="container">
+        <table class="table">
+            <thead class="thead-light">
+                <tr>
+                    <th>E-Mail</th>
+                    <th>Prénom</th>
+                    <th>Nom</th>
+                    <th>Date de Mise à jour</th>
+                    <th>Lien de modification</th>
+                </tr>
+            </thead>
+            @{foreach (var item in Model)
+                {
+                    <tbody>
+                        <tr>
+                            <td>@item.utilisateur_email</td>
+                            <td>@item.prenom</td>
+                            <td>@item.nom</td>
+                            <td>@item.date_maj.ToString("dd/MM/yyyy")</td>
+                            <td><a class="bouton" href="/Admin/ModifierUtilisateur?id=@item.utilisateur_email">Modifier</a></td>
+                        </tr>
+                    </tbody>
+                }
+            }
+        </table>
+    </div>
+
+    <div class="vide"></div>
+</body>
+@section footerstyle{
+    .footerstyle{position:fixed;bottom:0px;width:100%}
+}
+
+

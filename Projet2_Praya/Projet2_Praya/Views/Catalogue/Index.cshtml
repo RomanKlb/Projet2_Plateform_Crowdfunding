@@ -1,0 +1,72 @@
+﻿@model PagedList.IPagedList<Projet2_Praya.Models.DisplayInformationCatalogue>
+@using PagedList.Mvc;
+@{
+    ViewBag.Title = "Catalogue des projets";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="~/Content/Style/Carousel.css" />
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-8"></div>
+            <div class="col-4">
+                <br />
+                <br />
+            </div>
+        </div>
+    </div>
+    <section>
+        <div class="m-md-2" id="videPetit">
+            <h2>Catalogue des projets</h2>
+        </div>
+    </section>
+
+    <div class="container-fluid">
+
+        <div class="row">
+            @foreach (var item in Model)
+            {
+
+                <div class="col-4">
+                    <br />
+                    <div class="row justify-content-center">@item.Libelle</div>
+                    <figure class="row justify-content-center"> <img src="@Url.Action("getMedia", new { id = item.Id_media })" alt="@item.Libelle" height="200" width="350"></figure>
+                    <br />
+                    <div class="row justify-content-center">
+                        <div id="banniere_description_projet">
+                            <a href="/Catalogue/VueProjet/@item.Id_projet" class="bouton_suivi2projet">Voir le projet <img src="~/Content/Images/flecheblanchedroite.png" alt="" /></a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+    <div class="mb-5"></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <div class="row justify-content-center">
+                    @Html.PagedListPager(Model, page => Url.Action("Index", new { page, pageSize = Model.PageSize }),
+                   new PagedListRenderOptions() { LiElementClasses = new List<string> { "page-item", "page-link" },
+                       DisplayLinkToIndividualPages = true, DisplayPageCountAndCurrentLocation = false, MaximumPageNumbersToDisplay = 10})
+                </div>
+                <div class="row justify-content-center">
+                    @Model.FirstItemOnPage à @Model.LastItemOnPage sur @Model.TotalItemCount Projets
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="vide"></div>
+
+</body>
+

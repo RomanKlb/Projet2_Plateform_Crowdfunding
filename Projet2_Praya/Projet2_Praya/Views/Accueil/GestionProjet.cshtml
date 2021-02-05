@@ -1,0 +1,226 @@
+﻿
+@{
+    ViewBag.Title = "Gestion de projet";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    <link rel="stylesheet" href="~/Content/Styles_5/bootstrap.css">
+}
+
+
+
+<section>
+    <div class="m-md-2" id="videPetit">
+        <h2>
+            Vous souhaitez vous lancer sur PraYa?
+        </h2>
+    </div>
+</section>
+
+<div class="m-md-5"></div>
+
+<div class="m-5">
+    <h4>PraYa vous permet de promouvoir vos projets, en 4 étapes.</h4>
+</div>
+
+<div class="m-md-5"></div>
+
+<div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+            <div class="container-fluid">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    1- Je crée mon compte ou je me connecte
+                </button>
+            </div>
+        </h2>
+        <!--retirer "show" collé à collapse, celui ci reste ouvert à chaque chargement de la page alors qu'il doit être fermé puis qu'il s'ouvre au clic-->
+        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="row justify-content-start">
+                                <div>
+                                    Un compte PraYa vous donne accès à plusieurs fonctionnalités et vous permet d'effectuer des opérations
+                                    telles que la création de projet et la récolte de dons.
+                                </div>
+                                <div class="md-1">
+                                    <ul class="md-2">
+                                        <li>o Vous n’avez pas de compte, inscrivez-vous !</li>
+                                        <li>o Renseignez vos informations de compte tels que votre e-mail et un mot de passe !</li>
+                                    </ul>
+                                </div>
+                                <div class="md-1">
+                                    <strong>Félicitations ! Votre compte est maintenant créé.</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+            <div class="container-fluid">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    2- Je remplis les informations relatives à mon association
+                </button>
+            </div>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="row justify-content-start">
+                                <div>
+                                    Un formulaire de création de projet vous permettra de saisir des données rapidement et de manière structurée.
+                                </div>
+                                <div class="md-1">
+                                    Pour plus de simplicité et d’efficacité. Vous aurez besoin de votre numéro
+                                    RNA et de votre IBAN.
+                                </div>
+                                <div class="md-1">
+                                    Sachez que vous aurez toujours la possibilité de modifier vos informations.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+            <div class="container-fluid">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    3- Je présente mon projet
+                </button>
+            </div>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="row justify-content-start">
+                                <div>
+                                    <strong>En indiquant: </strong>
+                                </div>
+                                <div>
+                                    1 - Le titre de mon projet :
+                                </div>
+                                <div class="m-md-2">
+                                    <div>
+                                        Pour être facilement identifié, choisissez un titre clair et concis.
+                                    </div>
+                                    <div>
+                                        Privilégiez les mots porteurs de sens et évitez les termes superflus.
+                                    </div>
+                                </div>
+                                <div class="md-3">
+
+                                    2 - La cagnotte souhaitée :
+                                </div>
+                                <div class="m-md-2">
+                                    <div>
+                                        Il faut viser l’objectif minimum, mais nécessaire pour réaliser votre projet.
+                                    </div>
+                                    <div>
+                                        Vous êtes dans l’obligation d’atteindre cet objectif pour recevoir le montant collecté.
+                                    </div>
+                                </div>
+                                <div class="m-md-2">
+                                    <div>
+                                        Pour estimer cette cagnotte :
+                                    </div>
+                                    <ul class="md-2">
+                                        <li>
+                                            o Établissez les postes budgétaires nécessaires à la réalisation de votre projet.
+                                        </li>
+                                        <li>
+                                            o Listez ce budget par ordre de priorité.
+                                        </li>
+                                        <li>
+                                            o Sélectionnez les postes budgétaires vitaux à votre projet. Le montant qu’il représente est l’objectif de votre collecte !
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="md-3">
+                                    3 - La date du début et de fin :
+                                </div>
+                                <div class="m-md-2">
+                                    <div>
+                                        Pendant votre collecte, vous allez devoir fédérer une communauté d’individus autour de votre projet pour qu’ils vous soutiennent.
+                                        Alors laissez-vous le temps d’atteindre votre objectif, mais évitez de faire durer votre collecte trop longtemps : au contraire,
+                                        le sentiment d’urgence permet justement de motiver vos communautés à contribuer. La durée d’une collecte sur PraYa est de 60 jours maximum.
+                                        La durée moyenne d’une collecte est de 40 jours.
+                                    </div>
+                                </div>
+
+                                <div class="md-3">
+                                    4 - La description complète du projet :
+                                </div>
+                                <div class="m-md-2">
+                                    <div>
+                                        Racontez votre projet, le but est de créer le plus d’interactions possibles et d’apporter un aspect émotionnel et personnel au projet.
+                                    </div>
+                                    <div>
+                                        N'hésitez pas à présenter votre équipe dans la description.
+                                    </div>
+                                    <div>
+                                        Décrivez votre calendrier provisoire, vous devez obligatoirement préciser les échéances et étapes de développement de votre projet associées au budget.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingFour">
+            <div class="container-fluid">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    4- J’ajoute des médias à mon projet
+                </button>
+            </div>
+        </h2>
+        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="row justify-content-start">
+                                <div>
+                                    <strong>Vous avez la possibilité d’ajouter des médias</strong>
+                                </div>
+                                <div class="md-1">
+                                    Pour présenter et illustrer le projet, optez au moins pour une image principale (JPEG). Vous pouvez associer jusqu'à 4 images au total.
+                                </div>
+                                <div class="md-1">
+                                    L’objectif est d’attirer l’oeil sur les réseaux sociaux, quand vous relaierez la campagne de crowdfunding.
+                                </div>
+                                <div>
+                                    L'image de présentation doit être simple, linéaire et inspirante.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="vide"></div>
+
+@section footerstyle{
+    .footerstyle{position:fixed;bottom:0px;width:100%}
+}
+
+
+
+
+

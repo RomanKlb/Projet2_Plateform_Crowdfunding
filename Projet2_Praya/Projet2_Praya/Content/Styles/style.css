@@ -1,0 +1,459 @@
+
+/*Header début*/
+body
+{
+    font-family: calibri, Arial, sans-serif;
+   
+}
+
+header
+{
+position: fixed;
+top: 0;
+right: 0;
+left: 0;
+z-index: 1030;
+background: url('images/separateur.png') repeat-x bottom;
+display: flex;
+text-align: left;
+justify-content: space-between;
+align-items: flex-end; 
+position:0;
+border-bottom-left-radius: 20px ;
+border-bottom-right-radius: 20px ;
+background-color: #87CEFA;
+background-image: linear-gradient(to top left,
+                                  rgba(0, 0, 0, .2),
+                                  rgba(0, 0, 0, .2) 30%,
+                                  rgba(0, 0, 0, 0));
+	
+}
+
+.fixedtopcolor
+{
+border-bottom-left-radius: 20px ;
+border-bottom-right-radius: 20px ;
+background-color: #87CEFA;
+background-image: linear-gradient(to top left,
+                                  rgba(0, 0, 0, .2),
+                                  rgba(0, 0, 0, .2) 30%,
+                                  rgba(0, 0, 0, 0))
+}
+
+.fixedtopleft
+{
+position: fixed;
+top: 0;
+bottom: 5;
+right: 0;
+left: 40;
+z-index: 1030;
+}
+
+/*#logo
+{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}*/
+
+#logo img
+{
+	/*position: absolute;*/
+position: fixed;
+top: 0;
+right: 0;
+left: 0;
+z-index: 1030;
+
+width: 59px;
+height: 60px;
+margin-left: 20px;
+margin-top: 5px;
+}
+
+header h1
+{
+    font-size: 2.5em;
+    font-weight: normal;
+    margin: 0 0 0 10px;
+    margin-left: 20px;
+}
+
+header h2
+{
+
+    font-size: 1.1em;
+    margin-top: 0px;
+    font-weight: normal;
+    margin-left: 15px;
+}
+
+nav ul
+{
+    list-style-type: none;
+    display: flex;
+}
+
+nav li
+{
+    margin-right: 15px;
+}
+
+nav a
+{
+    font-size: 1.3em;
+    color: #181818;
+    padding-bottom: 3px;
+    text-decoration: none;
+}
+
+nav a:hover
+{
+    color : white;
+    background-color : #78B7DB;
+  border-radius: 10px;
+    background-image: linear-gradient(to top left,
+                                      rgba(0, 0, 0, .2),
+                                      rgba(0, 0, 0, .2) 30%,
+                                      rgba(0, 0, 0, 0));
+}
+
+/*Header FIN*/
+
+/*bouton déroulant Profil*/
+
+.boutonProfil {
+    font-size: 1.3em;
+    color: #181818;
+    padding-bottom: 3px;
+    text-decoration: none;
+}
+
+    .boutonProfil:hover {
+        color: white;
+        background-color: #78B7DB;
+        border-radius: 10px;
+        background-image: linear-gradient(to top left, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2) 30%, rgba(0, 0, 0, 0));
+    }
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-child {
+    display: none;
+    font-size: 1rem;
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 10px;
+    background-color: #87CEFA;
+    background-image: linear-gradient(to top left, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2) 30%, rgba(0, 0, 0, 0));
+    box-shadow: 0px 0px 2px 1px #87CEFA;
+}
+
+    .dropdown-child a {
+        color: white;
+        text-decoration: none;
+        display: block;
+    }
+
+.dropdown:hover .dropdown-child {
+    display: block;
+}
+
+
+
+
+
+/*Body début*/
+
+.titrecatalogue 
+{
+    color: #65B0D8;
+    font-weight: bold;
+    text-align: center;
+}
+
+.col-4, .titreProjet {
+    text-align: center;
+}
+
+#description {
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: mintcream;
+    resize: none;
+}
+
+.wrapper{
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper.active .sidebar_formulaire_créationProjet
+{
+  width: 80px;
+}
+
+.wrapper.active .main_container .container{
+  width: calc(100% - 80px);
+  margin-left: 225px;
+}
+
+li
+{
+     list-style: none;
+
+}
+
+#àDroite
+{
+	margin-right: 5px;
+}
+
+.main_container .sidebar_formulaire_créationProjet{
+  position: fixed;
+  top: 290px;
+  margin-left: 0px;
+  width: 200px;
+  height: 23%;
+  background: #87CEFA;
+  border-radius: 10px;
+  background-image: linear-gradient(to top left,
+                                      rgba(0, 0, 0, .2),
+                                      rgba(0, 0, 0, .2) 30%,
+                                      rgba(0, 0, 0, 0));
+}
+
+.main_container .sidebar_formulaire_créationProjet .sidebar__inner{
+  position: relative;
+}
+
+.main_container .container{
+  margin-top: 60px;
+  width: calc(100% - 225px);
+  margin-left: 200px;
+  padding: 30px;
+}
+
+.main_container .sidebar_formulaire_créationProjet ul li a{
+  color: white;
+  font-size: 18px;
+  padding: 20px 30px;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+.main_container .sidebar_formulaire_créationProjet ul li a .icon
+{
+  margin-right: 15px;
+  font-size: 28px;
+}
+
+.main_container .sidebar_formulaire_créationProjet ul li a.active{
+  background: white;
+  color: black;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.main_container .container .item{
+  background: white;
+  /*border: 1px solid #87CEFA;*/
+  box-shadow : 0px 0px 2px 1px #87CEFA;
+  margin-bottom: 30px;
+  padding: 20px;
+  font-size: 14px;
+  line-height: 22px;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+
+.boutonInput {
+    margin-right: 10px;
+    height: 20px;
+    margin-left: 10px;
+    border: 0;
+    padding: 0 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 10px;
+    background-color: #87CEFA;
+    background-image: linear-gradient(to top left, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2) 30%, rgba(0, 0, 0, 0));
+    box-shadow: 0px 0px 2px 1px #87CEFA;
+}
+
+.bouton {
+    margin-right: 10px;
+    height: 20px;
+    margin-left: 10px;
+    border: 0;
+    padding: 0 20px;
+    font-size: 1rem;
+    text-align: center;
+    position: center;
+    color: white;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 10px;
+    background-color: #87CEFA;
+    background-image: linear-gradient(to top left, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2) 30%, rgba(0, 0, 0, 0));
+    box-shadow: 0px 0px 2px 1px #87CEFA;
+}
+.bouton:hover
+{
+	border-radius: 10px;
+	background-color : #78B7DB;
+    background-image: linear-gradient(to top left,
+                                      rgba(0, 0, 0, .2),
+                                      rgba(0, 0, 0, .2) 30%,
+                                      rgba(0, 0, 0, 0));
+}
+
+.bouton_config
+{
+  color: white;
+}
+
+
+.vide
+{
+  margin-bottom: 160px;
+}
+
+#videPetit 
+{
+    margin-bottom: 0;
+    text-align:center;
+}
+
+#videMoyen
+{
+    margin-top : 80px;
+    text-align:center;
+}
+
+a:hover
+{
+    color: white;
+}
+
+.bouton_suivi2projet 
+{
+    height: 20px;
+    position: absolute;
+    right: 5px;
+    bottom: 4px;
+    font-size: 1.2em;
+    text-align: center;
+    padding: 3px 8px 0px 8px;
+    color: white;
+    text-decoration: none;
+}
+
+#banniere_description_projet {
+    position: absolute;
+    bottom: 0;
+    width: 90%;
+    height: 20px;
+    padding-top: 15px;
+    border-radius: 20px;
+    background-color: #87CEFA;
+    background-image: linear-gradient(to top left, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2) 30%, rgba(0, 0, 0, 0));
+    color: white;
+    font-size: 0.8em;
+}
+
+
+.bodytitreavantapres
+{
+	padding-bottom: 3%;
+}
+
+.bodycontenuapres
+{
+	padding-bottom: 5%;
+}
+
+.bodytitreavant
+{
+	padding-top: 3%;
+}
+
+/*carousel début*/
+imgCarousel{
+	height : 200px;
+}
+/*carousel fin*/
+
+
+/*Body FIN*/
+
+/*Footer début*/
+
+footer
+{
+  display: flex;
+  background: url('images/separateur.png') repeat-x top;
+  padding-top: 25px;
+  border-top-left-radius: 20px ;
+  border-top-right-radius: 20px ;
+  background-color: #87CEFA;
+  background-image: linear-gradient(to top left,
+                                  rgba(0, 0, 0, .2),
+                                  rgba(0, 0, 0, .2) 30%,
+                                  rgba(0, 0, 0, 0));
+}
+
+footer p, footer ul
+{
+    font-size: 0.8em;
+}
+
+footer h1
+{
+    font-size: 1.1em;
+}
+
+.footerblabla
+{
+	color: white;
+}
+
+#a_propos
+{
+    width: 28%;
+    margin-left: 30px;
+
+}
+
+#mes_photos
+{
+    width: 35%;
+}
+
+#Aide
+{
+    width: 31%;
+}
+
+/*Footer FIN*/
+
+
+/*NAJAT début*/
+
+
+
+/*NAJAT FIN*/

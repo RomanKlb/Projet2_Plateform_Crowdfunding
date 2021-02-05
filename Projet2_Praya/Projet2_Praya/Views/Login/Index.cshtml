@@ -1,0 +1,120 @@
+﻿@model Projet2_Praya.ViewModels.UtilisateurViewModel
+@{
+    ViewBag.Title = "Login à l'application";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-8"></div>
+            <div class="col-4">
+                <br />
+            </div>
+        </div>
+    </div>
+
+    <section>
+        <div class="m-md-2" id="videPetit">
+            <h2>
+                Connexion
+            </h2>
+        </div>
+    </section>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-4">
+            </div>
+            <div class="col-4">
+                @if (Model.Authentifie)
+                {
+                    <p>
+                        <h4>Vous êtes déjà authentifié sous : </h4>
+                        @Model.Utilisateur.utilisateur_email <br />
+                        @Model.Utilisateur.nom @Model.Utilisateur.prenom <br /><br />
+
+                        <a class="bouton" href="/Login/ModifierUtilisateur">Modifier Profil</a><br/>
+                        <a class="bouton" href="/Login/Deconnexion">Voulez-vous vous déconnecter ?</a><br/>
+       
+                    </p>
+                }
+            </div>
+            <div class="col-4">
+            </div>
+        </div>
+    </div>
+
+    @if (!Model.Authentifie)
+    {
+        using (Html.BeginForm())
+        {
+            <div class="p-md-4"></div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-3"></div>
+                    <div class="col-2">
+                        <div class="row justify-content-lg-end">
+                            <label for="EmailUtilisateur">E-Mail</label>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="row justify-content-center">
+
+                            @Html.TextBoxFor(m => m.Utilisateur.utilisateur_email,new { @type = "email" })
+
+                        </div>
+                    </div>
+                    <div class="col-5"></div>
+
+                    <div class="col-3"></div>
+                    <div class="col-2">
+                        <div class="row justify-content-lg-end">
+                            <label for="MdpUtilisateur">Mot de passe</label>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="row justify-content-center">
+                            <div class="w-100"></div>
+
+                            @Html.PasswordFor(m => m.Utilisateur.mot_de_passe)
+                            @Html.ValidationMessageFor(m => m.Utilisateur.utilisateur_email,"",new { @style = "color:red;" })
+                            @Html.ValidationMessageFor(m => m.Utilisateur.mot_de_passe)
+
+                        </div>
+                    </div>
+                    <div class="col-5"></div>
+
+                </div>
+            </div>
+            <br />
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-4"></div>
+                    <div class="col-2">
+                        <div class="row justify-content-center">
+                            <a class="bouton" href="/Login/CreerCompte"> Créer un compte</a>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="row justify-content-start">                            
+                            <input class="boutonInput" type="submit" onclick="" value="Se connecter" />
+
+                        </div>
+                    </div>
+                    <div class="col-4"></div>
+                </div>
+            </div>
+        }
+    }
+
+
+        <div class="vide"></div>
+    </body>
+@section footerstyle{
+    .footerstyle{position:fixed;bottom:0px;width:100%}
+}
+
+
+

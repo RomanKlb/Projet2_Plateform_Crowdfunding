@@ -1,0 +1,165 @@
+﻿@model Projet2_Praya.Models.utilisateur
+@{
+    ViewBag.Title = "Modifier un utilisateur";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-8"></div>
+            <div class="col-4">
+                <br />
+                <a class="bouton" href="/Admin/Index">Retour Accueil Administrateur</a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <section>
+        <div class="m-md-2" id="videPetit">
+            <h2>
+                Modifier un Utilisateur
+            </h2>
+        </div>
+    </section>
+
+
+
+
+    @using (Html.BeginForm())
+    {
+        <div class="p-md-4"></div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-3"></div>
+                <div class="col-2">
+                    <div class="row justify-content-lg-end">
+                        <label>E-Mail</label>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="row justify-content-center">
+
+                        @Html.TextBoxFor(m => m.utilisateur_email, new { @disabled = "true" })
+                        @Html.ValidationMessageFor(m => m.utilisateur_email)
+
+                    </div>
+                </div>
+                <div class="col-5"></div>
+
+                <div class="col-3"></div>
+                <div class="col-2">
+                    <div class="row justify-content-lg-end">
+                        <label>Mot de passe</label>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="row justify-content-center">
+                        <div class="w-100"></div>
+
+                        @Html.PasswordFor(m => m.mot_de_passe)
+                        @Html.ValidationMessageFor(m => m.mot_de_passe, "", new { @style = "color:red;" })
+
+                    </div>
+                </div>
+                <div class="col-5"></div>
+
+                <div class="col-3"></div>
+                <div class="col-2">
+                    <div class="row justify-content-lg-end">
+                        <label>Nom</label>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="row justify-content-center">
+                        <div class="w-100"></div>
+
+                        @Html.TextBoxFor(m => m.nom)
+                        @Html.ValidationMessageFor(m => m.nom, "", new { @style = "color:red;" })
+
+                    </div>
+                </div>
+                <div class="col-5"></div>
+
+                <div class="col-3"></div>
+                <div class="col-2">
+                    <div class="row justify-content-lg-end">
+                        <label>Prénom</label>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="row justify-content-center">
+                        <div class="w-100"></div>
+
+                        @Html.TextBoxFor(m => m.prenom)
+                        @Html.ValidationMessageFor(m => m.prenom, "", new { @style = "color:red;" })
+
+                    </div>
+                </div>
+                <div class="col-5"></div>
+            </div>
+        </div>
+        <br />
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="col-2">
+                    <div class="row justify-content-center">
+
+                        <a class="bouton" href="/Admin/AfficheUtilisateurs">Retour</a>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="row justify-content-center">
+
+                        <input class="boutonInput" type="submit" value="Modifier" />
+                    </div>
+                </div>
+                <div class="col-4"></div>
+            </div>
+        </div>
+
+        <div style="display:none">
+            @Html.TextBoxFor(m => m.utilisateur_email)
+        </div>
+
+@*<div>
+    <label>email : </label>
+    @Html.DisplayTextFor(model => model.utilisateur_email)
+    </div>
+    <div style="display:none">
+        @Html.TextBoxFor(model => model.utilisateur_email)
+    </div>
+    <div>
+        <label>Mot de passe : </label>
+        <!--@Html.LabelFor(model => model.mot_de_passe) -->
+        @Html.PasswordFor(model => model.mot_de_passe)
+    </div>
+    <div>
+        <label>Prénom : </label>
+        <!--@Html.LabelFor(model => model.prenom) -->
+        @Html.TextBoxFor(model => model.prenom)
+    </div>
+    <div>
+        <label>Nom de Famille : </label>
+        <!-- @Html.LabelFor(model => model.nom) -->
+        @Html.TextBoxFor(model => model.nom)
+    </div>
+    <br />*@
+
+}
+
+        <div class="vide"></div>
+</body>
+@section footerstyle{
+    .footerstyle{position:fixed;bottom:0px;width:100%}
+}
+
+
+                
+            
+               
+       

@@ -1,0 +1,137 @@
+﻿@model Projet2_Praya.ViewModels.ProjetPageListViewModel
+
+@{
+    ViewBag.Title = "Accueil de la plateforme Praya";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    <link rel="stylesheet" href="~/Content/Styles/CarouselEasy.css" />
+    <link rel="stylesheet" href="~/Content/Styles/CarouselBis.css" />
+}
+
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-3">
+                    @if (ViewBag.utilisateur != null)
+                    {
+                        <br />
+                        <p>Bienvenue @ViewBag.utilisateur.prenom @ViewBag.utilisateur.nom</p>
+                    }
+                </div>
+                <div class="col-1">
+                </div>
+                <div class="col-4">
+                </div>
+                <div class="col-4">
+                    Heure du serveur : @ViewBag.curdate.ToString("le dddd dd/MM/yyyy à H:mm:ss")
+
+                    <br />
+                    @if (ViewBag.resp_projet == 1)
+                    {
+                        <a class="bouton" href="/CreationProjet/AfficheUserListProjets"> Vos Projets </a>
+                    }
+                    <br />
+                    @if (ViewBag.donateur == 1)
+                    {
+                        <a class="bouton" href="/Don/AfficheDonsDonateur"> Vos dons</a>
+                    }
+                    <br />
+                    @if (ViewBag.administrateur == 1)
+                    {
+                        <a class="bouton" href="/Admin/Index">Administration</a>
+                    }
+
+                </div>
+            </div>
+        </div>
+        <section>
+            <div id="videPetit">
+                <h1 class="titrecatalogue">Bienvenue sur PraYa</h1><br />
+                <h4>
+                    PraYa, la plateforme dédiée à ceux qui agissent pour la Biodiversité
+                </h4>
+
+            </div>
+        </section>
+
+        <div class="text-center">
+            @using (Html.BeginForm("LibSearchProj", "Catalogue", FormMethod.Post))
+            {
+               
+                <div>
+                    <label for="ProjName"> Entrez le nom d'un projet</label>
+                </div>
+                @Html.TextBoxFor(m => m.CritRecherche.libelle)
+                @Html.ValidationMessageFor(m => m.CritRecherche.libelle)
+                <br />
+                <br />
+                <input class="boutonInput" type="submit" value="Recherchez" />
+            }
+        </div>
+
+        <span id="sl_play" class="sl_command">&nbsp;</span>
+        <span id="sl_pause" class="sl_command">&nbsp;</span>
+
+        <section id="slideshow">
+
+            <a class="play_commands pause" href="#sl_pause" title="Maintain paused">Pause</a>
+            <a class="play_commands play" href="#sl_play" title="Play the animation">Play</a>
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div id="slider">
+
+                        <figure>
+                            <img src="~/Content/Images/Ilot_prayaCarousel.jpg" alt="">
+                            <img src="~/Content/Images/coeurRogner.jpg" />
+                            <img src="~/Content/Images/tortue.jpg" />
+                            <img src="~/Content/Images/waouvacances.jpg" />
+                            <img src="~/Content/Images/dieu.jpg" />
+
+                            @*<figcaption>
+            blablablablablablablabla
+        </figcaption>*@
+                        </figure>
+
+                    </div>
+                </div>
+                <span id="timeline"></span>
+            </div>
+        </section>
+
+        <div class="vide"></div>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-2"></div>
+                <div class="col-8">
+                    <div class="justify-content-start">
+                        <b>PraYa la plateforme qui vous connecte à l’environnement !</b> <br />
+                        La biodiversité ! elle se trouve dans votre cour, vos environs, votre pays et votre planète ! <br />
+                        La perte de cette biodiversité serait catastrophique, car notre survie en dépend.<br />
+                        Les activités humaines déteriorent la diversité des écosystèmes, des espèces et des gènes plus rapidement que la nature ne peut la créer.
+                        Elles menacent les aspects écologiques, économiques, récréatifs et culturels que nous retirons des ressources vivantes de la Terre. <br />
+                        <br />
+                        PraYa vise à construire financièrement les projets relatifs à la sauvegarde, à la protection ainsi qu’à la restauration de l’environnement
+                        et de la biodiversité. Elle introduit et promeut donc des projets d’intérêt public à caractère environnemental. Ces projets peuvent porter
+                        sur la lutte contre la destruction d’habitats, la création d’aires terrestres ou marines protégées, la protection d’espèces fragiles ou
+                        menacées, l’écotourisme ou encore sur des opérations de sensibilisation à l’environnement. <br />
+                        <br />
+                        <b>Comment pouvez-vous aider à protéger la biodiversité ?</b><br />
+                        Contribuez collectivement à la sauvegarde du monde qui nous entoure ! Participez à soutenir nos projets !<br />
+                        Les pages qui suivent vous proposerons des projets authentiques et solides en lequels vous pourrez investir pour contribuer à la conservation de la biodiversité.<br />
+                        L’objectif principal de PraYa est d’apporter aux associations à caractère environnemental une solution efficace dans la promotion et le
+                        financement de leurs projets.  Ces associations pourront ainsi offrir une visibilité accrue à leur projet auprès d’une communauté de
+                        visiteurs réellement concernés par la thématique de l’écologie et de l’environnement.<br />
+                        Au travers d’un contrôle rigoureux des projets présentés, PraYa apportera, aux associations, des visiteurs confortés,
+                        tout en offrant aux futurs donateurs l’assurance de participer de manière authentique à la sauvegarde de la nature et de l’environnement.<br />
+                        <br />
+                        <b>Nous vous remercions d’ores et déjà de l’intérêt que vous portez à PraYa ! </b><br />
+                    </div>
+                </div>
+                <div class="col-2"></div>
+            </div>
+        </div>
+
+        <div class="vide"></div>
+        <div class="vide"></div>
+    </body>

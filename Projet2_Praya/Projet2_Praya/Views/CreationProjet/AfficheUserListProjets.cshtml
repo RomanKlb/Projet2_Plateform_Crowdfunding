@@ -1,0 +1,63 @@
+﻿@model List<Projet2_Praya.Models.DisplayInformationProjet>
+@{
+    ViewBag.Title = "Affichage de la Liste des projets de l'utilisateur";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-8"></div>
+            <div class="col-4">
+                <br />
+                <a class="bouton" href="/Accueil/Index">Retour Accueil</a>
+            </div>
+        </div>
+    </div>
+    <section>
+        <div class="m-md-2" id="videPetit">
+            <h2>
+                Liste de vos projets
+            </h2>
+        </div>
+    </section>
+    <div class="p-md-4"></div>
+
+
+    <div class="container">
+        <table class="table">
+            <thead class="thead-light">
+                <tr>
+                    <th>Libellé</th>
+                    <th>Type du projet</th>
+                    <th>Etat</th>
+                    <th>Montant Attendu</th>
+                    <th>Montant Collecté</th>
+                    <th>Date Butoir</th>
+                    <th>Détail</th>
+                </tr>
+            </thead>
+            @{foreach (var item in Model)
+                {
+                    <tbody>
+                        <tr>
+                            <td>@item.libelle</td>
+                            <td>@item.type_du_projet</td>
+                            <td>@item.lib_etat</td>
+                            <td>@item.montant_attendu</td>
+                            <td>@item.montant_collecte</td>
+                            <td>@item.date_butoir.ToString("dd/MM/yyyy")</td>
+                            <td><a class="bouton" href="/Catalogue/VueProjet?id=@item.id_projet&act=admu">Ici</a></td>
+                        </tr>
+                    </tbody>
+                }
+            }
+        </table>
+    </div>
+
+    <div class="vide"></div>
+</body>
+@section footerstyle{
+    .footerstyle{position:fixed;bottom:0px;width:100%}
+}

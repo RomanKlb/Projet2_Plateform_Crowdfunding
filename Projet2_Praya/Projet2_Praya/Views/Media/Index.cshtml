@@ -1,0 +1,277 @@
+﻿@model Projet2_Praya.Models.medium
+@{
+    ViewBag.Title = "Médias associés au projet";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-8"></div>
+            <div class="col-4">
+                <br />
+                <a class="bouton" href="/CreationProjet/AfficheUserListProjets">Retour Liste des Projet</a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <section>
+        <div class="m-md-2" id="videPetit">
+            <h2>
+                Ajoutez des médias à votre projet !
+            </h2>
+        </div>
+    </section>
+
+
+    <div class="container">
+        @if (ViewBag.monprojet != null)
+        {
+            <div>
+
+                <div>Libellé projet: <h3>@ViewBag.monprojet.libelle</h3> </div>
+            </div>
+        }
+        <hr />
+    </div>
+
+
+    @using (Html.BeginForm("CreateMedia", "media", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        @Html.AntiForgeryToken()
+
+        <div style="display:none">
+            <label>numéro projet : </label>
+            @Html.TextBoxFor(model => model.id_projet)
+        </div>
+
+        <div class="p-md-4"></div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-3"></div>
+                <div class="col-2">
+                    <div class="row justify-content-lg-end">
+                        <label>Libellé image</label>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="row justify-content-center">
+
+                        @Html.DropDownListFor(model => model.lib_image, new SelectList(ViewBag.LibImage, "Value", "Text"), "Selectionnez Libellé")
+                        @if (ViewBag.errLibel != "")
+                        {
+                            <label style="color:red">@ViewBag.errLibel</label>
+                        }
+                    </div>
+                </div>
+                <div class="col-5"></div>
+
+
+                <div class="col-4"></div>
+                <div class="col-3">
+                    <div class="w-100">
+                        <div class="row justify-content-center">
+                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                            <input name="fileToUpload" type="file"><br />
+                            @if (ViewBag.errFile != "")
+                            {
+                                <label style="color:red">@ViewBag.errFile</label>
+                            }
+                        </div>
+                    </div>
+                </div>
+                <div class="col-5"></div>
+            </div>
+        </div>
+        <br />
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-5"></div>
+                <div class="col-2">
+                    <div class="row justify-content-center">
+
+                        <input class="boutonInput" type="submit" value="Importer" />
+
+                    </div>
+                </div>
+                <div class="col-5"></div>
+            </div>
+        </div>
+        
+       
+    }
+
+        <div class="container-fluid">
+            @if (ViewBag.monmedia != -1)
+            {
+                <br />
+                <hr />
+                <br />
+
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-8">
+                        <div class="row justify-content-center">
+                            <h2>Image principale du projet</h2>
+                        </div>
+                    </div>
+                    <div class="col-2"></div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-8">
+                        <div class="w-100">
+                            <div class="row justify-content-center">
+                                <img src="@Url.Action("GetPicture", new { id = ViewBag.monmedia })" height="600" width="1000" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2"></div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-8">
+                        <div class="w-100">
+                            <div class="text-center">
+                                <a class="bouton" href="/Media/DeleteMedia/@ViewBag.monMedia">Supprimer l'image</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2"></div>
+                </div>
+            }
+
+            @if (ViewBag.image2 != -1)
+            {
+                <br />
+                <hr />
+                <br />
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-8">
+                        <div class="row justify-content-center">
+                            <h2>Seconde image du projet</h2>
+                        </div>
+                    </div>
+                    <div class="col-2"></div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-8">
+                        <div class="w-100">
+                            <div class="row justify-content-center">
+                                <img src="@Url.Action("GetPicture", new { id = ViewBag.image2 })" height="600" width="1000" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2"></div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-8">
+                        <div class="w-100">
+                            <div class="text-center">
+                                <a class="bouton" href="/Media/DeleteMedia/@ViewBag.image2">Supprimer l'image</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2"></div>
+                </div>
+            }
+
+            @if (ViewBag.image3 != -1)
+            {
+                <br />
+                <hr />
+                <br />
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-8">
+                        <div class="row justify-content-center">
+                            <h2>Troisième image du projet</h2>
+                        </div>
+                    </div>
+                    <div class="col-2"></div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-8">
+                        <div class="w-100">
+                            <div class="row justify-content-center">
+                                <img src="@Url.Action("GetPicture", new { id = ViewBag.image3 })" height="600" width="1000" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2"></div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-8">
+                        <div class="w-100">
+                            <div class="text-center">
+                                <a class="bouton" href="/Media/DeleteMedia/@ViewBag.image3">Supprimer l'image</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2"></div>
+                </div>
+            }
+
+            @if (ViewBag.image4 != -1)
+            {
+                <br />
+                <hr />
+                <br />
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-8">
+                        <div class="row justify-content-center">
+                            <h2>Quatrième image du projet</h2>
+                        </div>
+                    </div>
+                    <div class="col-2"></div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-8">
+                        <div class="w-100">
+                            <div class="row justify-content-center">
+                                <img src="@Url.Action("GetPicture", new { id = ViewBag.image4 })" height="600" width="1000" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2"></div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-8">
+                        <div class="w-100">
+                            <div class="text-center">
+                                <a class="bouton" href="/Media/DeleteMedia/@ViewBag.image4">Supprimer l'image</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2"></div>
+                </div>
+            }
+        </div>
+    <div class="vide"></div>
+</body>
+
+@section footerstyle{
+    .footerstyle{position:fixed;bottom:0px;width:100%}
+}
+
+
+

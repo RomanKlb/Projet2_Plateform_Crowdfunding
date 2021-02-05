@@ -1,0 +1,536 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="projet2Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="administrateur">
+    <Key>
+      <PropertyRef Name="administrateur_email" />
+    </Key>
+    <Property Name="administrateur_email" Type="String" MaxLength="120" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="niveau_autorisation" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="agendum">
+    <Key>
+      <PropertyRef Name="email" />
+    </Key>
+    <Property Name="email" Type="String" MaxLength="120" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="calendrier" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="date_maj" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="espace_utilisateur" Relationship="Self.fk_agenda_email" FromRole="agenda" ToRole="espace_utilisateur" />
+    <NavigationProperty Name="evenements" Relationship="Self.fk_evenement_agenda" FromRole="agenda" ToRole="evenement" />
+    <NavigationProperty Name="rendez_vous" Relationship="Self.fk_rdv_agenda" FromRole="agenda" ToRole="rendez_vous" />
+  </EntityType>
+  <EntityType Name="association">
+    <Key>
+      <PropertyRef Name="id_association" />
+    </Key>
+    <Property Name="id_association" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RNA" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IBAN" Type="String" MaxLength="34" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nom_association" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="resp_projet" Relationship="Self.fk_respproj_association" FromRole="association" ToRole="resp_projet" />
+  </EntityType>
+  <EntityType Name="don">
+    <Key>
+      <PropertyRef Name="id_don" />
+    </Key>
+    <Property Name="id_don" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="email" Type="String" MaxLength="120" FixedLength="false" Unicode="false" />
+    <Property Name="nom" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="prenom" Type="String" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="montant" Type="Decimal" Nullable="false" />
+    <Property Name="num_autorisation" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="date_heure" Type="DateTime" Nullable="false" />
+    <Property Name="id_projet" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="projet" Relationship="Self.fk_don_projet" FromRole="don" ToRole="projet" />
+    <NavigationProperty Name="justificatif" Relationship="Self.fk_justificatif_don" FromRole="don" ToRole="justificatif" />
+    <NavigationProperty Name="porfefeuille_factures" Relationship="Self.fk_portefeulle_don" FromRole="don" ToRole="porfefeuille_factures" />
+  </EntityType>
+  <EntityType Name="donateur">
+    <Key>
+      <PropertyRef Name="email_donateur" />
+    </Key>
+    <Property Name="email_donateur" Type="String" MaxLength="120" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="adresse" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="code_postal" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ville" Type="String" MaxLength="35" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="utilisateur" Relationship="Self.fk_donateur_utilisateurl" FromRole="donateur" ToRole="utilisateur" />
+    <NavigationProperty Name="preferences" Relationship="Self.fk_preference_donateur" FromRole="donateur" ToRole="preference" />
+  </EntityType>
+  <EntityType Name="espace_utilisateur">
+    <Key>
+      <PropertyRef Name="email" />
+    </Key>
+    <Property Name="email" Type="String" MaxLength="120" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="date_creation" Type="DateTime" />
+    <NavigationProperty Name="agendum" Relationship="Self.fk_agenda_email" FromRole="espace_utilisateur" ToRole="agenda" />
+    <NavigationProperty Name="utilisateur" Relationship="Self.fk_espace_user" FromRole="espace_utilisateur" ToRole="utilisateur" />
+    <NavigationProperty Name="notifications" Relationship="Self.fk_notif_espace" FromRole="espace_utilisateur" ToRole="notification" />
+    <NavigationProperty Name="profil" Relationship="Self.fk_profile_espace" FromRole="espace_utilisateur" ToRole="profil" />
+  </EntityType>
+  <EntityType Name="evenement">
+    <Key>
+      <PropertyRef Name="id_evenement" />
+    </Key>
+    <Property Name="id_evenement" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="date_evenement" Type="DateTime" Nullable="false" />
+    <Property Name="desciprtion" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="lien_evenement" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nbr_max_personnes" Type="Int16" Nullable="false" />
+    <Property Name="nom_evenement" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="statut_evenement" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="type_evenement" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="email" Type="String" MaxLength="120" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="agendum" Relationship="Self.fk_evenement_agenda" FromRole="evenement" ToRole="agenda" />
+  </EntityType>
+  <EntityType Name="facture">
+    <Key>
+      <PropertyRef Name="id_facture" />
+    </Key>
+    <Property Name="id_facture" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="date_facture" Type="DateTime" Nullable="false" />
+    <Property Name="libelle" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="montant" Type="Decimal" Nullable="false" />
+    <Property Name="numero" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="porfefeuille_factures" Relationship="Self.fk_portefeuille_facture" FromRole="facture" ToRole="porfefeuille_factures" />
+  </EntityType>
+  <EntityType Name="justificatif">
+    <Key>
+      <PropertyRef Name="id_don" />
+    </Key>
+    <Property Name="date" Type="DateTime" Nullable="false" />
+    <Property Name="montant" Type="Decimal" Nullable="false" />
+    <Property Name="id_don" Type="Int16" Nullable="false" />
+    <NavigationProperty Name="don" Relationship="Self.fk_justificatif_don" FromRole="justificatif" ToRole="don" />
+  </EntityType>
+  <EntityType Name="medium">
+    <Key>
+      <PropertyRef Name="id_media" />
+    </Key>
+    <Property Name="id_media" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="media" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="lien" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="id_projet" Type="Int32" Nullable="false" />
+    <Property Name="type_media" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="lib_image" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="projet" Relationship="Self.fk_media_projet" FromRole="media" ToRole="projet" />
+  </EntityType>
+  <EntityType Name="message">
+    <Key>
+      <PropertyRef Name="id_message" />
+    </Key>
+    <Property Name="id_message" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="emetteur_email" Type="String" MaxLength="120" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="destinataire_email" Type="String" MaxLength="120" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="libelle" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="contenu" Type="String" MaxLength="5000" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="date_creation" Type="DateTime" Nullable="false" />
+    <Property Name="top_lu" Type="SByte" Nullable="false" />
+  </EntityType>
+  <EntityType Name="notification">
+    <Key>
+      <PropertyRef Name="id_notification" />
+    </Key>
+    <Property Name="id_notification" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="date_notification" Type="DateTime" Nullable="false" />
+    <Property Name="libelle" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="type" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="email" Type="String" MaxLength="120" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="espace_utilisateur" Relationship="Self.fk_notif_espace" FromRole="notification" ToRole="espace_utilisateur" />
+  </EntityType>
+  <EntityType Name="porfefeuille_factures">
+    <Key>
+      <PropertyRef Name="id_portfeuille" />
+    </Key>
+    <Property Name="id_portfeuille" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="libelle" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="id_don" Type="Int16" Nullable="false" />
+    <Property Name="id_facture" Type="Int16" Nullable="false" />
+    <NavigationProperty Name="don" Relationship="Self.fk_portefeulle_don" FromRole="porfefeuille_factures" ToRole="don" />
+    <NavigationProperty Name="facture" Relationship="Self.fk_portefeuille_facture" FromRole="porfefeuille_factures" ToRole="facture" />
+  </EntityType>
+  <EntityType Name="portefeuille_projet">
+    <Key>
+      <PropertyRef Name="id_portefeuille" />
+    </Key>
+    <Property Name="id_portefeuille" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="resp_projet" Type="String" MaxLength="120" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="libelle" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="resp_projet1" Relationship="Self.fk_portfeuille_responsable" FromRole="portefeuille_projet" ToRole="resp_projet" />
+    <NavigationProperty Name="projets" Relationship="Self.fk_projet_portefeuille" FromRole="portefeuille_projet" ToRole="projet" />
+  </EntityType>
+  <EntityType Name="preference">
+    <Key>
+      <PropertyRef Name="id_preference" />
+    </Key>
+    <Property Name="id_preference" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="mot_cle" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="valeur" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="email_donateur" Type="String" MaxLength="120" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="donateur" Relationship="Self.fk_preference_donateur" FromRole="preference" ToRole="donateur" />
+  </EntityType>
+  <EntityType Name="profil">
+    <Key>
+      <PropertyRef Name="email" />
+    </Key>
+    <Property Name="email" Type="String" MaxLength="120" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="date_connexion" Type="DateTime" Nullable="false" />
+    <Property Name="photo" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <NavigationProperty Name="espace_utilisateur" Relationship="Self.fk_profile_espace" FromRole="profil" ToRole="espace_utilisateur" />
+  </EntityType>
+  <EntityType Name="projet">
+    <Key>
+      <PropertyRef Name="id_projet" />
+    </Key>
+    <Property Name="id_projet" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="libelle" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="6000" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="type_du_projet" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="etat_projet" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="montant_attendu" Type="Decimal" Nullable="false" />
+    <Property Name="montant_collecte" Type="Decimal" Nullable="false" />
+    <Property Name="date_butoir" Type="DateTime" Nullable="false" />
+    <Property Name="date_maj" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_portefeuille" Type="Int16" Nullable="false" />
+    <Property Name="date_debut" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="dons" Relationship="Self.fk_don_projet" FromRole="projet" ToRole="don" />
+    <NavigationProperty Name="media" Relationship="Self.fk_media_projet" FromRole="projet" ToRole="media" />
+    <NavigationProperty Name="portefeuille_projet" Relationship="Self.fk_projet_portefeuille" FromRole="projet" ToRole="portefeuille_projet" />
+    <NavigationProperty Name="type_projet" Relationship="Self.fk_projet_type" FromRole="projet" ToRole="type_projet" />
+  </EntityType>
+  <EntityType Name="rendez_vous">
+    <Key>
+      <PropertyRef Name="id_rendezvous" />
+    </Key>
+    <Property Name="id_rendezvous" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="date_evenement" Type="DateTime" Nullable="false" />
+    <Property Name="moyen" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="personne_associee" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="sujet" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="email" Type="String" MaxLength="120" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="agendum" Relationship="Self.fk_rdv_agenda" FromRole="rendez_vous" ToRole="agenda" />
+  </EntityType>
+  <EntityType Name="resp_projet">
+    <Key>
+      <PropertyRef Name="resp_email" />
+    </Key>
+    <Property Name="resp_email" Type="String" MaxLength="120" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="niveau_habilitation" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="id_association" Type="Int16" Nullable="false" />
+    <NavigationProperty Name="association" Relationship="Self.fk_respproj_association" FromRole="resp_projet" ToRole="association" />
+    <NavigationProperty Name="portefeuille_projet" Relationship="Self.fk_portfeuille_responsable" FromRole="resp_projet" ToRole="portefeuille_projet" />
+  </EntityType>
+  <EntityType Name="type_projet">
+    <Key>
+      <PropertyRef Name="type" />
+    </Key>
+    <Property Name="type" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="libelle" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="projets" Relationship="Self.fk_projet_type" FromRole="type_projet" ToRole="projet" />
+  </EntityType>
+  <EntityType Name="utilisateur">
+    <Key>
+      <PropertyRef Name="utilisateur_email" />
+    </Key>
+    <Property Name="utilisateur_email" Type="String" MaxLength="120" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="mot_de_passe" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nom" Type="String" MaxLength="35" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="prenom" Type="String" MaxLength="35" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="date_maj" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="donateur" Relationship="Self.fk_donateur_utilisateurl" FromRole="utilisateur" ToRole="donateur" />
+    <NavigationProperty Name="espace_utilisateur" Relationship="Self.fk_espace_user" FromRole="utilisateur" ToRole="espace_utilisateur" />
+  </EntityType>
+  <Association Name="fk_agenda_email">
+    <End Role="espace_utilisateur" Type="Self.espace_utilisateur" Multiplicity="1" />
+    <End Role="agenda" Type="Self.agendum" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="espace_utilisateur">
+        <PropertyRef Name="email" />
+      </Principal>
+      <Dependent Role="agenda">
+        <PropertyRef Name="email" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_evenement_agenda">
+    <End Role="agenda" Type="Self.agendum" Multiplicity="1" />
+    <End Role="evenement" Type="Self.evenement" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="agenda">
+        <PropertyRef Name="email" />
+      </Principal>
+      <Dependent Role="evenement">
+        <PropertyRef Name="email" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_rdv_agenda">
+    <End Role="agenda" Type="Self.agendum" Multiplicity="1" />
+    <End Role="rendez_vous" Type="Self.rendez_vous" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="agenda">
+        <PropertyRef Name="email" />
+      </Principal>
+      <Dependent Role="rendez_vous">
+        <PropertyRef Name="email" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_respproj_association">
+    <End Role="association" Type="Self.association" Multiplicity="1" />
+    <End Role="resp_projet" Type="Self.resp_projet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="association">
+        <PropertyRef Name="id_association" />
+      </Principal>
+      <Dependent Role="resp_projet">
+        <PropertyRef Name="id_association" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_don_projet">
+    <End Role="projet" Type="Self.projet" Multiplicity="1" />
+    <End Role="don" Type="Self.don" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="projet">
+        <PropertyRef Name="id_projet" />
+      </Principal>
+      <Dependent Role="don">
+        <PropertyRef Name="id_projet" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_justificatif_don">
+    <End Role="don" Type="Self.don" Multiplicity="1" />
+    <End Role="justificatif" Type="Self.justificatif" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="don">
+        <PropertyRef Name="id_don" />
+      </Principal>
+      <Dependent Role="justificatif">
+        <PropertyRef Name="id_don" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_portefeulle_don">
+    <End Role="don" Type="Self.don" Multiplicity="1" />
+    <End Role="porfefeuille_factures" Type="Self.porfefeuille_factures" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="don">
+        <PropertyRef Name="id_don" />
+      </Principal>
+      <Dependent Role="porfefeuille_factures">
+        <PropertyRef Name="id_don" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_donateur_utilisateurl">
+    <End Role="utilisateur" Type="Self.utilisateur" Multiplicity="1" />
+    <End Role="donateur" Type="Self.donateur" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="utilisateur">
+        <PropertyRef Name="utilisateur_email" />
+      </Principal>
+      <Dependent Role="donateur">
+        <PropertyRef Name="email_donateur" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_preference_donateur">
+    <End Role="donateur" Type="Self.donateur" Multiplicity="1" />
+    <End Role="preference" Type="Self.preference" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="donateur">
+        <PropertyRef Name="email_donateur" />
+      </Principal>
+      <Dependent Role="preference">
+        <PropertyRef Name="email_donateur" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_espace_user">
+    <End Role="utilisateur" Type="Self.utilisateur" Multiplicity="1" />
+    <End Role="espace_utilisateur" Type="Self.espace_utilisateur" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="utilisateur">
+        <PropertyRef Name="utilisateur_email" />
+      </Principal>
+      <Dependent Role="espace_utilisateur">
+        <PropertyRef Name="email" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_notif_espace">
+    <End Role="espace_utilisateur" Type="Self.espace_utilisateur" Multiplicity="1" />
+    <End Role="notification" Type="Self.notification" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="espace_utilisateur">
+        <PropertyRef Name="email" />
+      </Principal>
+      <Dependent Role="notification">
+        <PropertyRef Name="email" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_profile_espace">
+    <End Role="espace_utilisateur" Type="Self.espace_utilisateur" Multiplicity="1" />
+    <End Role="profil" Type="Self.profil" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="espace_utilisateur">
+        <PropertyRef Name="email" />
+      </Principal>
+      <Dependent Role="profil">
+        <PropertyRef Name="email" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_portefeuille_facture">
+    <End Role="facture" Type="Self.facture" Multiplicity="1" />
+    <End Role="porfefeuille_factures" Type="Self.porfefeuille_factures" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="facture">
+        <PropertyRef Name="id_facture" />
+      </Principal>
+      <Dependent Role="porfefeuille_factures">
+        <PropertyRef Name="id_facture" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_media_projet">
+    <End Role="projet" Type="Self.projet" Multiplicity="1" />
+    <End Role="media" Type="Self.medium" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="projet">
+        <PropertyRef Name="id_projet" />
+      </Principal>
+      <Dependent Role="media">
+        <PropertyRef Name="id_projet" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_portfeuille_responsable">
+    <End Role="resp_projet" Type="Self.resp_projet" Multiplicity="1" />
+    <End Role="portefeuille_projet" Type="Self.portefeuille_projet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="resp_projet">
+        <PropertyRef Name="resp_email" />
+      </Principal>
+      <Dependent Role="portefeuille_projet">
+        <PropertyRef Name="resp_projet" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_projet_portefeuille">
+    <End Role="portefeuille_projet" Type="Self.portefeuille_projet" Multiplicity="1" />
+    <End Role="projet" Type="Self.projet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="portefeuille_projet">
+        <PropertyRef Name="id_portefeuille" />
+      </Principal>
+      <Dependent Role="projet">
+        <PropertyRef Name="id_portefeuille" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_projet_type">
+    <End Role="type_projet" Type="Self.type_projet" Multiplicity="1" />
+    <End Role="projet" Type="Self.projet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="type_projet">
+        <PropertyRef Name="type" />
+      </Principal>
+      <Dependent Role="projet">
+        <PropertyRef Name="type_du_projet" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="projet2Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="administrateurs" EntityType="Self.administrateur" />
+    <EntitySet Name="agenda" EntityType="Self.agendum" />
+    <EntitySet Name="associations" EntityType="Self.association" />
+    <EntitySet Name="dons" EntityType="Self.don" />
+    <EntitySet Name="donateurs" EntityType="Self.donateur" />
+    <EntitySet Name="espace_utilisateur" EntityType="Self.espace_utilisateur" />
+    <EntitySet Name="evenements" EntityType="Self.evenement" />
+    <EntitySet Name="factures" EntityType="Self.facture" />
+    <EntitySet Name="justificatifs" EntityType="Self.justificatif" />
+    <EntitySet Name="media" EntityType="Self.medium" />
+    <EntitySet Name="messages" EntityType="Self.message" />
+    <EntitySet Name="notifications" EntityType="Self.notification" />
+    <EntitySet Name="porfefeuille_factures" EntityType="Self.porfefeuille_factures" />
+    <EntitySet Name="portefeuille_projet" EntityType="Self.portefeuille_projet" />
+    <EntitySet Name="preferences" EntityType="Self.preference" />
+    <EntitySet Name="profils" EntityType="Self.profil" />
+    <EntitySet Name="projets" EntityType="Self.projet" />
+    <EntitySet Name="rendez_vous" EntityType="Self.rendez_vous" />
+    <EntitySet Name="resp_projet" EntityType="Self.resp_projet" />
+    <EntitySet Name="type_projet" EntityType="Self.type_projet" />
+    <EntitySet Name="utilisateurs" EntityType="Self.utilisateur" />
+    <AssociationSet Name="fk_agenda_email" Association="Self.fk_agenda_email">
+      <End Role="espace_utilisateur" EntitySet="espace_utilisateur" />
+      <End Role="agenda" EntitySet="agenda" />
+    </AssociationSet>
+    <AssociationSet Name="fk_evenement_agenda" Association="Self.fk_evenement_agenda">
+      <End Role="agenda" EntitySet="agenda" />
+      <End Role="evenement" EntitySet="evenements" />
+    </AssociationSet>
+    <AssociationSet Name="fk_rdv_agenda" Association="Self.fk_rdv_agenda">
+      <End Role="agenda" EntitySet="agenda" />
+      <End Role="rendez_vous" EntitySet="rendez_vous" />
+    </AssociationSet>
+    <AssociationSet Name="fk_respproj_association" Association="Self.fk_respproj_association">
+      <End Role="association" EntitySet="associations" />
+      <End Role="resp_projet" EntitySet="resp_projet" />
+    </AssociationSet>
+    <AssociationSet Name="fk_don_projet" Association="Self.fk_don_projet">
+      <End Role="projet" EntitySet="projets" />
+      <End Role="don" EntitySet="dons" />
+    </AssociationSet>
+    <AssociationSet Name="fk_justificatif_don" Association="Self.fk_justificatif_don">
+      <End Role="don" EntitySet="dons" />
+      <End Role="justificatif" EntitySet="justificatifs" />
+    </AssociationSet>
+    <AssociationSet Name="fk_portefeulle_don" Association="Self.fk_portefeulle_don">
+      <End Role="don" EntitySet="dons" />
+      <End Role="porfefeuille_factures" EntitySet="porfefeuille_factures" />
+    </AssociationSet>
+    <AssociationSet Name="fk_donateur_utilisateurl" Association="Self.fk_donateur_utilisateurl">
+      <End Role="utilisateur" EntitySet="utilisateurs" />
+      <End Role="donateur" EntitySet="donateurs" />
+    </AssociationSet>
+    <AssociationSet Name="fk_preference_donateur" Association="Self.fk_preference_donateur">
+      <End Role="donateur" EntitySet="donateurs" />
+      <End Role="preference" EntitySet="preferences" />
+    </AssociationSet>
+    <AssociationSet Name="fk_espace_user" Association="Self.fk_espace_user">
+      <End Role="utilisateur" EntitySet="utilisateurs" />
+      <End Role="espace_utilisateur" EntitySet="espace_utilisateur" />
+    </AssociationSet>
+    <AssociationSet Name="fk_notif_espace" Association="Self.fk_notif_espace">
+      <End Role="espace_utilisateur" EntitySet="espace_utilisateur" />
+      <End Role="notification" EntitySet="notifications" />
+    </AssociationSet>
+    <AssociationSet Name="fk_profile_espace" Association="Self.fk_profile_espace">
+      <End Role="espace_utilisateur" EntitySet="espace_utilisateur" />
+      <End Role="profil" EntitySet="profils" />
+    </AssociationSet>
+    <AssociationSet Name="fk_portefeuille_facture" Association="Self.fk_portefeuille_facture">
+      <End Role="facture" EntitySet="factures" />
+      <End Role="porfefeuille_factures" EntitySet="porfefeuille_factures" />
+    </AssociationSet>
+    <AssociationSet Name="fk_media_projet" Association="Self.fk_media_projet">
+      <End Role="projet" EntitySet="projets" />
+      <End Role="media" EntitySet="media" />
+    </AssociationSet>
+    <AssociationSet Name="fk_portfeuille_responsable" Association="Self.fk_portfeuille_responsable">
+      <End Role="resp_projet" EntitySet="resp_projet" />
+      <End Role="portefeuille_projet" EntitySet="portefeuille_projet" />
+    </AssociationSet>
+    <AssociationSet Name="fk_projet_portefeuille" Association="Self.fk_projet_portefeuille">
+      <End Role="portefeuille_projet" EntitySet="portefeuille_projet" />
+      <End Role="projet" EntitySet="projets" />
+    </AssociationSet>
+    <AssociationSet Name="fk_projet_type" Association="Self.fk_projet_type">
+      <End Role="type_projet" EntitySet="type_projet" />
+      <End Role="projet" EntitySet="projets" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

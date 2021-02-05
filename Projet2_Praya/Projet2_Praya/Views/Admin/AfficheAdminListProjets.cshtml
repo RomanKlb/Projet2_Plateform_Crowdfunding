@@ -1,0 +1,105 @@
+﻿@model Projet2_Praya.ViewModels.AdmVueProjets
+@*@model List<Projet2_Praya.ViewModels.DetailsInformationProjet>*@
+
+@{
+    ViewBag.Title = "AfficheAdminListProjets";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-8"></div>
+            <div class="col-4">
+                Heure du serveur : @ViewBag.curdate.ToString("le dddd dd/MM/yyyy à H:mm:ss")
+                <br />
+                <a class="bouton" href="/Admin/Index">Retour Accueil Administrateur</a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <section>
+        <div class="m-md-2" id="videPetit">
+            <h2>
+                Liste de l'ensemble des projets
+            </h2>
+        </div>
+        <br />
+    </section>
+    @using (Html.BeginForm())
+    {
+        <div class="row">
+
+
+            <div class="col-8"></div>
+            <div class="col-1">
+                Etat projets :
+            </div>
+            <div class="col-1">
+                @Html.DropDownListFor(model => model.EtatProj,
+                new SelectList(ViewBag.LibEtats, "Value", "Text"), "<All>",new { @id = "lstEtat" })
+            </div>
+            <div class="col-1">
+                <div class="row justify-content-center" style="display:none;">
+
+                    <input class="boutonInput" type="submit" value="Selectionner" />
+                </div>
+            </div>
+            <div class="col-1"></div>
+
+        </div>
+    }
+    <div class="p-md-4"></div>
+    <div class="container">
+        <table class="table">
+            <thead class="thead-light">
+                <tr>
+                    <th>Libellé</th>
+                    <th>Type du Projet</th>
+                    <th>Etat</th>
+                    <th>Montant Attendu</th>
+                    <th>Montant Collecté</th>
+                    <th>Date Butoir</th>
+                    <th>Date Debut</th>
+                    <th>Créateur</th>
+                    <th>Détail</th>
+                </tr>
+            </thead>
+            @{foreach (var item in Model.lstprojets)
+                {
+                    <tbody>
+                        <tr>
+                            <td>@item.libelle</td>
+                            <td>@item.type_du_projet</td>
+                            <td>@item.lib_etat</td>
+                            <td>@item.montant_attendu</td>
+                            <td>@item.montant_collecte</td>
+                            <td>@item.date_butoir.ToString("dd/MM/yyyy")</td>
+                            <td>@item.date_debut.ToString("dd/MM/yyyy")</td>
+                            <td>@item.adm_email</td>
+                            <td><a class="bouton" href="/Catalogue/VueProjet?id=@item.id_projet&act=admf">Ici</a></td>
+                        </tr>
+                    </tbody>
+                }
+            }
+        </table>
+    </div>
+
+    <div class="vide"></div>
+    <div class="vide"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $("#lstEtat").change(function () {
+            $("form").submit()
+        })
+    </script>
+</body>
+@section footerstyle{
+    .footerstyle{position:fixed;bottom:0px;width:100%}
+}

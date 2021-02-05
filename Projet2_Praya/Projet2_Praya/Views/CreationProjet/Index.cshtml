@@ -1,0 +1,109 @@
+﻿@model Projet2_Praya.Models.association
+@{
+    ViewBag.Title = "Création de Projet : Association";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-8"></div>
+        <div class="col-4">
+            <br />
+            <a class="bouton" href="/Accueil/Index">Retour Accueil</a>
+        </div>
+    </div>
+</div>
+
+
+
+<section>
+    <div class="m-md-2" id="videPetit">
+        <h2>
+            Formulaire de création de projet
+        </h2>
+    </div>
+    <div class="m-md-2" id="videPetit">
+        <h4> Informations sur l'association</h4>
+    </div>
+</section>
+
+
+
+
+@using (Html.BeginForm())
+{
+    <div class="p-md-4"></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-2">
+                <div class="row justify-content-lg-end">
+                    <label>Nom de l'association</label>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="row justify-content-center">
+
+                    @Html.TextBoxFor(model => model.nom_association)
+                    @Html.ValidationMessageFor(model => model.nom_association, "", new { @style = "color:red;" })
+
+                </div>
+            </div>
+            <div class="col-5"></div>
+
+            <div class="col-3"></div>
+            <div class="col-2">
+                <div class="row justify-content-lg-end">
+                    <label>R.N.A.</label>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="row justify-content-center">
+                    <div class="w-100"></div>
+
+                    @Html.TextBoxFor(model => model.RNA)
+                    @Html.ValidationMessageFor(model => model.RNA, "", new { @style = "color:red;" })
+
+                </div>
+            </div>
+            <div class="col-5"></div>
+
+            <div class="col-3"></div>
+            <div class="col-2">
+                <div class="row justify-content-lg-end">
+                    <label>IBAN</label>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="row justify-content-center">
+                    <div class="w-100"></div>
+
+                    @Html.TextBoxFor(model => model.IBAN)
+                    @Html.ValidationMessageFor(model => model.IBAN, "", new { @style = "color:red;" })
+
+                </div>
+            </div>
+            <div class="col-5"></div>
+        </div>
+    </div>
+    <br />
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-5"></div>
+            <div class="col-2">
+                <div class="row justify-content-center">
+
+                    <input class="boutonInput" type="submit" value="Présenter votre projet !" />
+
+                </div>
+            </div>
+            <div class="col-5"></div>
+        </div>
+    </div>
+}
+
+<div class="vide"></div>
+
+@section footerstyle{
+    .footerstyle{position:fixed;bottom:0px;width:100%}
+}

@@ -1,0 +1,126 @@
+﻿@model Projet2_Praya.Models.utilisateur
+@{
+    ViewBag.Title = "Créer un compte utilisateur";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-8"></div>
+            <div class="col-4">
+                <br />
+                <a class="bouton" href="/Login/Index">Retour vers Connexion</a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <section>
+        <div class="m-md-2" id="videPetit">
+            <h2>
+                Création de votre utilisateur
+            </h2>
+        </div>
+    </section>
+
+
+
+
+    @using (Html.BeginForm())
+    {
+        <div class="p-md-4"></div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-3"></div>
+                <div class="col-2">
+                    <div class="row justify-content-lg-end">
+                        <label>E-Mail</label>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="row justify-content-center">
+                       
+                        @Html.TextBoxFor(m => m.utilisateur_email)
+                        @Html.ValidationMessageFor(m => m.utilisateur_email, "", new { @style = "color:red;" })
+
+                    </div>
+                </div>
+                <div class="col-5"></div>
+
+                <div class="col-3"></div>
+                <div class="col-2">
+                    <div class="row justify-content-lg-end">
+                        <label>Mot de passe</label>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="row justify-content-center">
+                        <div class="w-100"></div>
+
+                        @Html.PasswordFor(m => m.mot_de_passe)
+                        @Html.ValidationMessageFor(m => m.mot_de_passe, "", new { @style = "color:red;" })
+
+                    </div>
+                </div>
+                <div class="col-5"></div>
+
+                <div class="col-3"></div>
+                <div class="col-2">
+                    <div class="row justify-content-lg-end">
+                        <label>Nom</label>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="row justify-content-center">
+                        <div class="w-100"></div>
+
+                        @Html.TextBoxFor(m => m.nom)
+                        @Html.ValidationMessageFor(m => m.nom, "", new { @style = "color:red;" })
+
+                    </div>
+                </div>
+                <div class="col-5"></div>
+
+                <div class="col-3"></div>
+                <div class="col-2">
+                    <div class="row justify-content-lg-end">
+                        <label>Prénom</label>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="row justify-content-center">
+                        <div class="w-100"></div>
+
+                        @Html.TextBoxFor(m => m.prenom)
+                        @Html.ValidationMessageFor(m => m.prenom, "", new { @style = "color:red;" })
+
+                    </div>
+                </div>
+                <div class="col-5"></div>
+            </div>
+        </div>
+        <br />
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-5"></div>
+                <div class="col-2">
+                    <div class="row justify-content-center">
+
+                        <input class="boutonInput" type="submit" value="Créer" />
+
+                    </div>
+                </div>
+                <div class="col-5"></div>
+            </div>
+        </div>
+    }
+
+    <div class="vide"></div>
+</body>
+@section footerstyle{
+    .footerstyle{position:fixed;bottom:0px;width:100%}
+}
+

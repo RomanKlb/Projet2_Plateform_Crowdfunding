@@ -1,0 +1,397 @@
+﻿@model Projet2_Praya.Models.projet
+@{
+    ViewBag.Title = "Détail Projet";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@if (ViewBag.typact == "don")
+{
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-8"></div>
+            <div class="col-4">
+                <br />
+                <a class="bouton" href="/Catalogue/Index">Retour Catalogue</a>
+            </div>
+        </div>
+    </div>
+}
+else if (ViewBag.typact == "admu")
+{
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-8"></div>
+            <div class="col-4">
+                <br />
+                <a class="bouton" href="/CreationProjet/AfficheUserListProjets">Retour liste projets</a>
+            </div>
+        </div>
+    </div>
+}
+else if (ViewBag.typact == "admf")
+{
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-8"></div>
+            <div class="col-4">
+                <br />
+                <a class="bouton" href="/Admin/AfficheAdminListProjets">Retour liste projets</a>
+            </div>
+        </div>
+    </div>
+}
+
+
+
+<section>
+    <div class="m-md-2" id="videPetit">
+        <h2>
+            Détail du Projet
+        </h2>
+    </div>
+</section>
+
+
+<div class="row">
+    <div class="col-lg-2">
+
+    </div>
+    <div class="col-lg-8">
+
+        <hr />
+        <div>Libelle : <h5>@Model.libelle</h5></div>
+        @*<div>Libelle : <p class="lead"><b>@Model.libelle</b></p></div>*@
+        <hr />
+        <div>
+            Type de Projet : <h5>
+                @Model.type_du_projet
+                -
+                @if (ViewBag.type != null)
+                {
+                    @ViewBag.type.libelle
+                }
+            </h5>
+        </div>
+        <hr />
+        @if (ViewBag.asso != null)
+        {
+            <div>
+                Association :
+                <h5> @ViewBag.asso.nom_association</h5>
+
+            </div>
+        }
+
+
+        @if (ViewBag.typact != "don")
+        {
+            <div>
+                Etat : <label class="lead">
+                    <b>@Model.etat_projet - @ViewBag.Libetat</b>
+                </label>
+            </div>
+        }
+
+
+
+        <hr />
+
+    </div>
+    <div class="col-lg-2"></div>
+
+</div>
+<div class="row">
+    <div class="col-lg-2"></div>
+    <div class="col-lg-3">Date de Début Projet :<h5>@Model.date_debut.ToString("le dddd dd/MM/yyyy") </h5></div>
+    <div class="col-lg-3">Date Butoir Collecte:<h5> @Model.date_butoir.ToString("le dddd dd/MM/yyyy")  </h5></div>
+    <div class="col-lg-2"></div>
+</div>
+
+<div class="row">
+    <div class="col-lg-2"></div>
+    <div class="col-lg-3">Montant attendu : <h5>@Model.montant_attendu €</h5></div>
+    <div class="col-lg-3">Montant Collecté :<h5> @Model.montant_collecte €</h5></div>
+    <hr />
+    <div class="col-lg-2"></div>
+</div>
+<div class="row">
+    <div class="col-lg-2"></div>
+    <div class="col-lg-8 text-center">
+        <hr />
+        @if (ViewBag.monmedia != -1)
+        {
+            <figure class="row justify-content-center">
+                <img src="@Url.Action("GetMedia", new { id = ViewBag.monmedia })" height="600" width="1000" />
+            </figure>
+        }
+        else
+        {
+            <p>Pas d'image principale pour le projet</p>
+        }
+
+    </div>
+    <div class="col-lg-2"></div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-2">
+
+        </div>
+        <div class="col-lg-8">
+
+            <hr />
+            Descriptif :<br/>
+
+            <textarea disabled="true" rows="30" cols="120" style="background-color:white;" id="description"
+                      >@Model.description</textarea>
+
+        </div>
+        <div class="col-lg-2"></div>
+
+    </div>
+</div>
+    <div class="row">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8 text-center">
+
+            @if (ViewBag.image2 != -1)
+            {
+                <hr />
+
+                <figure class="row justify-content-center">
+                    <img src="@Url.Action("GetMedia", new { id = ViewBag.image2 })" height="600" width="1000" />
+                </figure>
+
+            }
+        </div>
+        <div class="col-lg-2"></div>
+    </div>
+    <div class="row">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8 text-center">
+
+            @if (ViewBag.image3 != -1)
+            {
+                <hr />
+
+                <figure class="row justify-content-center">
+                    <img src="@Url.Action("GetMedia", new { id = ViewBag.image3 })" height="600" width="1000" />
+                </figure>
+
+            }
+        </div>
+        <div class="col-lg-2"></div>
+    </div>
+    <div class="row">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8 text-center">
+
+            @if (ViewBag.image4 != -1)
+            {
+                <hr />
+
+                <figure class="row justify-content-center">
+                    <img src="@Url.Action("GetMedia", new { id = ViewBag.image4 })" height="600" width="1000" />
+                </figure>
+
+            }
+        </div>
+        <div class="col-lg-2"></div>
+    </div>
+    <div class="row">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8">
+            <hr />
+            <br />
+        </div>
+        <div class="col-lg-2"></div>
+    </div>
+    <div class="row">
+        <div class="col-lg-2"></div>
+
+
+        @if (ViewBag.typact == "don")
+        {
+            <div class="col-lg-8 text-center">
+
+
+                <figure class="row justify-content-center">
+                    <a class="bouton" href="/Don/Index/@Model.id_projet">Faire un Don</a>
+                </figure>
+            </div>
+
+        }
+
+        @if (ViewBag.typact == "admu")
+        {
+            if (Model.etat_projet == "P")
+            {
+                <div class="col-lg-8 text-center">
+
+                    <figure class="row justify-content-center">
+                        <button class="bouton" onclick="CnfDelProj()">Supprimer</button>
+                    </figure>
+                </div>
+            }
+            else if (Model.etat_projet == "C" || Model.etat_projet == "R")
+            {
+                <div class="col-lg-2 text-center">
+
+                    <figure class="row justify-content-center">
+                        <a class="bouton" href="/CreationProjet/ModifierProjet/@Model.id_projet">Modifier</a>
+                    </figure>
+                </div>
+                <div class="col-lg-3 text-center">
+
+                    <figure class="row justify-content-center">
+                        <button class="bouton" onclick="CnfDelProj()">Supprimer</button>
+                    </figure>
+                </div>
+                <div class="col-lg-3 text-center">
+
+                    <figure class="row justify-content-center">
+                        <button class="bouton" onclick="CnfAppProj()">Demande Approbation</button>
+                    </figure>
+                </div>
+            }
+           else if (Model.etat_projet == "W")
+            {
+            <div class="col-lg-4 text-center">
+
+                <figure class="row justify-content-center">
+                    <button class="bouton" onclick="CnfAnnProj()">Annuler Approbation</button>
+                </figure>
+            </div>
+
+            <div class="col-lg-4 text-center">
+
+                <figure class="row justify-content-center">
+                    <button class="bouton" onclick="CnfDelProj()">Supprimer</button>
+                </figure>
+            </div>
+            }
+            else
+            {
+            <div class="col-lg-4 text-center">
+
+                <figure class="row justify-content-center">
+                    <a class="bouton" href="/CreationProjet/ModifierProjet/@Model.id_projet">Modifier</a>
+                </figure>
+            </div>
+            <div class="col-lg-4 text-center">
+
+                <figure class="row justify-content-center">
+                    @*<a class="btn btn-lg btn-primary" href="#">Supprimer le Projet</a>*@
+                    <button class="bouton" onclick="CnfDelProj()">Supprimer</button>
+                </figure>
+            </div>
+             }
+
+        }
+
+        @if (ViewBag.typact == "admf")
+        {
+            if (Model.etat_projet == "W")
+            {
+                <div class="col-lg-3 text-center">
+
+                    <figure class="row justify-content-center">
+                        <a class="bouton" href="/CreationProjet/ModifierProjet/@Model.id_projet">Modifier</a>
+                    </figure>
+                </div>
+                <div class="col-lg-3 text-center">
+
+                    <figure class="row justify-content-center">
+                        <button class="bouton" onclick="CnfPubProj()">Publier</button>
+                    </figure>
+                </div>
+                <div class="col-lg-2 text-center">
+
+                    <figure class="row justify-content-center">
+                        <button class="bouton" onclick="CnfRejProj()">Rejeter</button>
+                    </figure>
+                </div>
+            }
+            else if (Model.etat_projet == "D")
+            {
+                <div class="col-lg-4 text-center">
+
+                    <figure class="row justify-content-center">
+                        <a class="bouton" href="/CreationProjet/ModifierProjet/@Model.id_projet">Modifier</a>
+                    </figure>
+                </div>
+                <div class="col-lg-4 text-center">
+
+                    <figure class="row justify-content-center">
+                        <button class="bouton" onclick="CnfActProj()">Restaurer</button>
+                    </figure>
+                </div>
+            }
+            else
+            {
+                <div class="col-lg-4 text-center">
+
+                    <figure class="row justify-content-center">
+                        <a class="bouton" href="/CreationProjet/ModifierProjet/@Model.id_projet">Modifier</a>
+                    </figure>
+                </div>
+                <div class="col-lg-4 text-center">
+
+                    <figure class="row justify-content-center">
+                        <button class="bouton" onclick="CnfDelProj()">Supprimer</button>
+                    </figure>
+                </div>
+            }
+
+        }
+
+        <div class="col-lg-2"></div>
+    </div>
+    <div class="vide"></div>
+    <script>
+function CnfDelProj() {
+  var r = confirm("Confirmez la suppression\n\nAppuyer sur Ok pour confirmer la suppression du projet");
+  if (r == true) {
+      location.href = "/CreationProjet/ModifierStatProjet?id=@Model.id_projet&stat=D&orig=@ViewBag.typact";
+  }
+}
+function CnfPubProj() {
+  var r = confirm("Confirmez la Publication\n\nAppuyer sur Ok pour confirmer la publication du projet");
+  if (r == true) {
+    location.href = "/CreationProjet/ModifierStatProjet?id=@Model.id_projet&stat=P&orig=@ViewBag.typact";
+  }
+}
+function CnfRejProj() {
+  var r = confirm("Confirmez le Rejet\n\nAppuyer sur Ok pour confirmer le rejet du projet");
+  if (r == true) {
+    location.href = "/CreationProjet/ModifierStatProjet?id=@Model.id_projet&stat=R&orig=@ViewBag.typact";
+  }
+}
+function CnfActProj() {
+  var r = confirm("Confirmez la Restauration\n\nAppuyer sur Ok pour confirmer la restauration du projet");
+  if (r == true) {
+    location.href = "/CreationProjet/ModifierStatProjet?id=@Model.id_projet&stat=C&orig=@ViewBag.typact";
+  }
+}
+
+function CnfAnnProj() {
+  var r = confirm("Confirmez l'Annulation Approbation\n\nAppuyer sur Ok pour confirmer l'annulation demande approbation du projet");
+  if (r == true) {
+    location.href = "/CreationProjet/ModifierStatProjet?id=@Model.id_projet&stat=C&orig=@ViewBag.typact";
+  }
+}
+
+function CnfAppProj() {
+  var r = confirm("Confirmez Demande d'Approbation\n\nAppuyer sur Ok pour confirmer la demande d'Approbation du projet");
+  if (r == true) {
+    location.href = "/CreationProjet/ModifierStatProjet?id=@Model.id_projet&stat=W&orig=@ViewBag.typact";
+  }
+}
+
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $("textarea").each(function () {
+    $(this).height($(this).prop("scrollHeight"))})
+</script>
+

@@ -1,0 +1,209 @@
+﻿@model Projet2_Praya.ViewModels.ProjetPageListViewModel
+@using PagedList.Mvc
+@{
+    ViewBag.Title = "Recherche de Projets";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-8"></div>
+            <div class="col-4">
+                <br />
+                <a class="bouton" href="/Accueil/Index">Retour Accueil</a>
+            </div>
+        </div>
+    </div>
+    <section>
+        <div class="m-md-2" id="videPetit">
+            <h2>
+                Vous recherchez un Projet ?
+            </h2>
+        </div>
+    </section>
+
+    <div class="m-mb-2" id="videPetit">
+        <h4>
+            Recherche Multi-critères
+        </h4>
+    </div>
+    <div class="p-md-4"></div>
+
+    @using (Html.BeginForm())
+    {
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-3"></div>
+                <div class="col-2">
+                    <div class="row justify-content-lg-end">
+                        <label>Entrez le nom d'un projet</label>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="row justify-content-center">
+                        <div class="w-100"></div>
+
+                        @Html.TextBoxFor(m => m.CritRecherche.libelle)
+                        @Html.ValidationMessageFor(m => m.CritRecherche.libelle)
+
+                    </div>
+                </div>
+                <div class="col-5"></div>
+
+                <div class="col-3"></div>
+                <div class="col-2">
+                    <div class="row justify-content-lg-end">
+                        <label>Entrez le nom d'une association</label>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="row justify-content-center">
+                        <div class="w-100"></div>
+
+                        @Html.TextBoxFor(m => m.CritRecherche.nom_association)
+                        @Html.ValidationMessageFor(m => m.CritRecherche.nom_association)
+
+                    </div>
+                </div>
+                <div class="col-5"></div>
+
+                <div class="col-3"></div>
+                <div class="col-2">
+                    <div class="row justify-content-lg-end">
+                        <label>Type de Projet</label>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="row justify-content-center">
+                        <div class="w-100"></div>
+
+                        @Html.DropDownListFor(m => m.CritRecherche.type_du_projet, new SelectList(ViewBag.TypesProjet, "Value", "Text"), "Selectionnez le Type")
+
+                    </div>
+                </div>
+                <div class="col-5"></div>
+
+                <div class="col-3"></div>
+                <div class="col-2">
+                    <div class="row justify-content-lg-end">
+                        <label>Entrez les dates limite de collecte</label>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="row justify-content-center">
+                        <div class="w-100"></div>
+
+                        @Html.TextBoxFor(m => m.CritRecherche.date_butoirMin, new { @type = "date" })
+
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="row justify-content-center">
+                        <div class="w-100"></div>
+
+                        @Html.TextBoxFor(m => m.CritRecherche.date_butoirMax, new { @type = "date" })
+
+                    </div>
+                </div>
+                <div class="col-2"></div>
+
+                <div class="col-3"></div>
+                <div class="col-2">
+                    <div class="row justify-content-lg-end">
+                        <label>Entrez les montants</label>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="row justify-content-center">
+                        <div class="w-100"></div>
+
+                        @Html.TextBoxFor(m => m.CritRecherche.montant_attenduMin, new { @type = "number" })
+
+
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="row justify-content-center">
+                        <div class="w-100"></div>
+
+                        @Html.TextBoxFor(m => m.CritRecherche.montant_attenduMax, new { @type = "number" })
+                    </div>
+                </div>
+                <div class="col-2"></div>
+            </div>
+        </div>
+        <br />
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-5"></div>
+                <div class="col-2">
+                    <div class="row justify-content-center">
+
+                        <input class="boutonInput" type="submit" value="C'est parti !" />
+
+                    </div>
+                </div>
+                <div class="col-5"></div>
+            </div>
+        </div>
+
+    }
+
+    @if (Model != null)
+    {
+        <div>
+            <div class="container-fluid">
+
+
+                <div class="row">
+                    @foreach (var item in Model.SearchModel)
+                    {
+
+                        <div class="col-4">
+                            <br />
+                            <div class="row justify-content-center">@item.Libelle</div>
+                            <figure class="row justify-content-center"> <img src="@Url.Action("getMedia", new { id = item.Id_media })" alt="@item.Libelle" height="200" width="350"></figure>
+                            <br />
+                            <div class="row justify-content-center">
+                                <div id="banniere_description_projet">
+                                    <a href="/Catalogue/VueProjet/@item.Id_projet" class="bouton_suivi2projet">Voir le projet <img src="~/Content/Images/flecheblanchedroite.png" alt="" /></a>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+
+            </div>
+            <div id="videPetit"></div>
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col">
+                        <div class="row justify-content-center">
+                            @Html.PagedListPager(Model.SearchModel, page => Url.Action("Index", new { page, pageSize = Model.SearchModel.PageSize }),
+            new PagedListRenderOptions() { LiElementClasses = new List<string> { "page-item", "page-link" }, DisplayLinkToIndividualPages = true, DisplayPageCountAndCurrentLocation = false, MaximumPageNumbersToDisplay = 10 })
+                        </div>
+                        <div class="row justify-content-center">
+                            @Model.SearchModel.FirstItemOnPage à @Model.SearchModel.LastItemOnPage sur @Model.SearchModel.TotalItemCount Projets
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="vide"></div>
+
+
+        </div>
+    }
+
+</body>
+@section footerstyle{
+    .footerstyle{position:fixed;bottom:0px;width:100%}
+}
+

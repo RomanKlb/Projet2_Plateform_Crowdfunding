@@ -1,0 +1,138 @@
+C:\Users\pierp\Documents\ISIKA\Projet 2\.net\Projet2_Praya_v_0.6_real_20210109_1730\Projet2_Praya\Projet2_Praya\bin\Projet2_Praya.dll.config
+C:\Users\pierp\Documents\ISIKA\Projet 2\.net\Projet2_Praya_v_0.6_real_20210109_1730\Projet2_Praya\Projet2_Praya\bin\Projet2_Praya.dll
+C:\Users\pierp\Documents\ISIKA\Projet 2\.net\Projet2_Praya_v_0.6_real_20210109_1730\Projet2_Praya\Projet2_Praya\bin\Projet2_Praya.pdb
+C:\Users\pierp\Documents\ISIKA\Projet 2\.net\Projet2_Praya_v_0.6_real_20210109_1730\Projet2_Praya\Projet2_Praya\bin\roslyn\csc.exe
+C:\Users\pierp\Documents\ISIKA\Projet 2\.net\Projet2_Praya_v_0.6_real_20210109_1730\Projet2_Praya\Projet2_Praya\bin\roslyn\csc.exe.config
+C:\Users\pierp\Documents\ISIKA\Projet 2\.net\Projet2_Praya_v_0.6_real_20210109_1730\Projet2_Praya\Projet2_Praya\bin\roslyn\csc.rsp
+C:\Users\pierp\Documents\ISIKA\Projet 2\.net\Projet2_Praya_v_0.6_real_20210109_1730\Projet2_Praya\Projet2_Praya\bin\roslyn\csi.exe
+C:\Users\pierp\Documents\ISIKA\Projet 2\.net\Projet2_Praya_v_0.6_real_20210109_1730\Projet2_Praya\Projet2_Praya\bin\roslyn\csi.rsp
+C:\Users\pierp\Documents\ISIKA\Projet 2\.net\Projet2_Praya_v_0.6_real_20210109_1730\Projet2_Praya\Projet2_Praya\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\pierp\Documents\ISIKA\Projet 2\.net\Projet2_Praya_v_0.6_real_20210109_1730\Projet2_Praya\Projet2_Praya\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\pierp\Documents\ISIKA\Projet 2\.net\Projet2_Praya_v_0.6_real_20210109_1730\Projet2_Praya\Projet2_Praya\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\pierp\Documents\ISIKA\Projet 2\.net\Projet2_Praya_v_0.6_real_20210109_1730\Projet2_Praya\Projet2_Praya\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\pierp\Documents\ISIKA\Projet 2\.net\Projet2_Praya_v_0.6_real_20210109_1730\Projet2_Praya\Projet2_Praya\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\pierp\Documents\ISIKA\Projet 2\.net\Projet2_Praya_v_0.6_real_20210109_1730\Projet2_Praya\Projet2_Praya\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\pierp\Documents\ISIKA\Projet 2\.net\Projet2_Praya_v_0.6_real_20210109_1730\Projet2_Praya\Projet2_Praya\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\pierp\Documents\ISIKA\Projet 2\.net\Projet2_Praya_v_0.6_real_20210109_1730\Projet2_Praya\Projet2_Praya\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\pierp\Documents\ISIKA\Projet 2\.net\Projet2_Praya_v_0.6_real_20210109_1730\Projet2_Praya\Projet2_Praya\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\pierp\Documents\ISIKA\Projet 2\.net\Projet2_Praya_v_0.6_real_20210109_1730\Projet2_Praya\Projet2_Praya\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\pierp\Documents\ISIKA\Projet 2\.net\Projet2_Praya_v_0.6_real_20210109_1730\Projet2_Praya\Projet2_Praya\bin\roslyn\System.AppContext.dll
+C:\Users\pierp\Documents\ISIKA\Projet 2\.net\Projet2_Praya_v_0.6_real_20210109_1730\Projet2_Praya\Projet2_Praya\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\pierp\Documents\ISIKA\Projet 2\.net\Projet2_Praya_v_0.6_real_20210109_1730\Projet2_Praya\Projet2_Praya\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\pierp\Documents\ISIKA\Projet 2\.net\Projet2_Praya_v_0.6_real_20210109_1730\Projet2_Praya\Projet2_Praya\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\pierp\Documents\ISIKA\Projet 2\.net\Projet2_Praya_v_0.6_real_20210109_1730\Projet2_Praya\Projet2_Praya\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\pierp\Documents\ISIKA\Projet 2\.net\Projet2_Praya_v_0.6_real_20210109_1730\Projet2_Praya\Projet2_Praya\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\pierp\Documents\ISIKA\Projet 2\.net\Projet2_Praya_v_0.6_real_20210109_1730\Projet2_Praya\Projet2_Praya\bin\roslyn\vbc.exe
+C:\Users\pierp\Documents\ISIKA\Projet 2\.net\Projet2_Praya_v_0.6_real_20210109_1730\Projet2_Praya\Projet2_Praya\bin\roslyn\vbc.exe.config
+C:\Users\pierp\Documents\ISIKA\Projet 2\.net\Projet2_Praya_v_0.6_real_20210109_1730\Projet2_Praya\Projet2_Praya\bin\roslyn\vbc.rsp
+C:\Users\pierp\Documents\ISIKA\Projet 2\.net\Projet2_Praya_v_0.6_real_20210109_1730\Projet2_Praya\Projet2_Praya\bin\roslyn\VBCSCompiler.exe
+C:\Users\pierp\Documents\ISIKA\Projet 2\.net\Projet2_Praya_v_0.6_real_20210109_1730\Projet2_Praya\Projet2_Praya\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\pierp\Documents\ISIKA\Projet 2\.net\Projet2_Praya_v_0.6_real_20210109_1730\Projet2_Praya\Projet2_Praya\bin\EntityFramework.dll
+C:\Users\pierp\Documents\ISIKA\Projet 2\.net\Projet2_Praya_v_0.6_real_20210109_1730\Projet2_Praya\Projet2_Praya\bin\EntityFramework.SqlServer.dll
+C:\Users\pierp\Documents\ISIKA\Projet 2\.net\Projet2_Praya_v_0.6_real_20210109_1730\Projet2_Praya\Projet2_Praya\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\pierp\Documents\ISIKA\Projet 2\.net\Projet2_Praya_v_0.6_real_20210109_1730\Projet2_Praya\Projet2_Praya\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\pierp\Documents\ISIKA\Projet 2\.net\Projet2_Praya_v_0.6_real_20210109_1730\Projet2_Praya\Projet2_Praya\bin\MySql.Data.dll
+C:\Users\pierp\Documents\ISIKA\Projet 2\.net\Projet2_Praya_v_0.6_real_20210109_1730\Projet2_Praya\Projet2_Praya\bin\MySql.Data.Entity.EF6.dll
+C:\Users\pierp\Documents\ISIKA\Projet 2\.net\Projet2_Praya_v_0.6_real_20210109_1730\Projet2_Praya\Projet2_Praya\bin\PagedList.dll
+C:\Users\pierp\Documents\ISIKA\Projet 2\.net\Projet2_Praya_v_0.6_real_20210109_1730\Projet2_Praya\Projet2_Praya\bin\PagedList.Mvc.dll
+C:\Users\pierp\Documents\ISIKA\Projet 2\.net\Projet2_Praya_v_0.6_real_20210109_1730\Projet2_Praya\Projet2_Praya\bin\System.Web.Helpers.dll
+C:\Users\pierp\Documents\ISIKA\Projet 2\.net\Projet2_Praya_v_0.6_real_20210109_1730\Projet2_Praya\Projet2_Praya\bin\System.Web.Mvc.dll
+C:\Users\pierp\Documents\ISIKA\Projet 2\.net\Projet2_Praya_v_0.6_real_20210109_1730\Projet2_Praya\Projet2_Praya\bin\System.Web.Razor.dll
+C:\Users\pierp\Documents\ISIKA\Projet 2\.net\Projet2_Praya_v_0.6_real_20210109_1730\Projet2_Praya\Projet2_Praya\bin\System.Web.Webpages.Deployment.dll
+C:\Users\pierp\Documents\ISIKA\Projet 2\.net\Projet2_Praya_v_0.6_real_20210109_1730\Projet2_Praya\Projet2_Praya\bin\System.Web.Webpages.dll
+C:\Users\pierp\Documents\ISIKA\Projet 2\.net\Projet2_Praya_v_0.6_real_20210109_1730\Projet2_Praya\Projet2_Praya\bin\System.Web.Webpages.Razor.dll
+C:\Users\pierp\Documents\ISIKA\Projet 2\.net\Projet2_Praya_v_0.6_real_20210109_1730\Projet2_Praya\Projet2_Praya\bin\EntityFramework.xml
+C:\Users\pierp\Documents\ISIKA\Projet 2\.net\Projet2_Praya_v_0.6_real_20210109_1730\Projet2_Praya\Projet2_Praya\bin\EntityFramework.SqlServer.xml
+C:\Users\pierp\Documents\ISIKA\Projet 2\.net\Projet2_Praya_v_0.6_real_20210109_1730\Projet2_Praya\Projet2_Praya\bin\MySql.Data.xml
+C:\Users\pierp\Documents\ISIKA\Projet 2\.net\Projet2_Praya_v_0.6_real_20210109_1730\Projet2_Praya\Projet2_Praya\bin\MySql.Data.Entity.EF6.xml
+C:\Users\pierp\Documents\ISIKA\Projet 2\.net\Projet2_Praya_v_0.6_real_20210109_1730\Projet2_Praya\Projet2_Praya\bin\PagedList.xml
+C:\Users\pierp\Documents\ISIKA\Projet 2\.net\Projet2_Praya_v_0.6_real_20210109_1730\Projet2_Praya\Projet2_Praya\bin\PagedList.Mvc.xml
+C:\Users\pierp\Documents\ISIKA\Projet 2\.net\Projet2_Praya_v_0.6_real_20210109_1730\Projet2_Praya\Projet2_Praya\bin\System.Web.Razor.xml
+C:\Users\pierp\Documents\ISIKA\Projet 2\.net\Projet2_Praya_v_0.6_real_20210109_1730\Projet2_Praya\Projet2_Praya\bin\System.Web.Webpages.xml
+C:\Users\pierp\Documents\ISIKA\Projet 2\.net\Projet2_Praya_v_0.6_real_20210109_1730\Projet2_Praya\Projet2_Praya\bin\System.Web.Webpages.Deployment.xml
+C:\Users\pierp\Documents\ISIKA\Projet 2\.net\Projet2_Praya_v_0.6_real_20210109_1730\Projet2_Praya\Projet2_Praya\bin\System.Web.Webpages.Razor.xml
+C:\Users\pierp\Documents\ISIKA\Projet 2\.net\Projet2_Praya_v_0.6_real_20210109_1730\Projet2_Praya\Projet2_Praya\bin\System.Web.Helpers.xml
+C:\Users\pierp\Documents\ISIKA\Projet 2\.net\Projet2_Praya_v_0.6_real_20210109_1730\Projet2_Praya\Projet2_Praya\bin\System.Web.Mvc.xml
+C:\Users\pierp\Documents\ISIKA\Projet 2\.net\Projet2_Praya_v_0.6_real_20210109_1730\Projet2_Praya\Projet2_Praya\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\pierp\Documents\ISIKA\Projet 2\.net\Projet2_Praya_v_0.6_real_20210109_1730\Projet2_Praya\Projet2_Praya\bin\fr\EntityFramework.resources.dll
+C:\Users\pierp\Documents\ISIKA\Projet 2\.net\Projet2_Praya_v_0.6_real_20210109_1730\Projet2_Praya\Projet2_Praya\bin\fr\EntityFramework.SqlServer.resources.dll
+C:\Users\pierp\Documents\ISIKA\Projet 2\.net\Projet2_Praya_v_0.6_real_20210109_1730\Projet2_Praya\Projet2_Praya\bin\fr\System.Web.Razor.resources.dll
+C:\Users\pierp\Documents\ISIKA\Projet 2\.net\Projet2_Praya_v_0.6_real_20210109_1730\Projet2_Praya\Projet2_Praya\bin\fr\System.Web.Webpages.resources.dll
+C:\Users\pierp\Documents\ISIKA\Projet 2\.net\Projet2_Praya_v_0.6_real_20210109_1730\Projet2_Praya\Projet2_Praya\bin\fr\System.Web.Webpages.Deployment.resources.dll
+C:\Users\pierp\Documents\ISIKA\Projet 2\.net\Projet2_Praya_v_0.6_real_20210109_1730\Projet2_Praya\Projet2_Praya\bin\fr\System.Web.Webpages.Razor.resources.dll
+C:\Users\pierp\Documents\ISIKA\Projet 2\.net\Projet2_Praya_v_0.6_real_20210109_1730\Projet2_Praya\Projet2_Praya\bin\fr\System.Web.Helpers.resources.dll
+C:\Users\pierp\Documents\ISIKA\Projet 2\.net\Projet2_Praya_v_0.6_real_20210109_1730\Projet2_Praya\Projet2_Praya\bin\fr\System.Web.Mvc.resources.dll
+C:\Users\pierp\Documents\ISIKA\Projet 2\.net\Projet2_Praya_v_0.6_real_20210109_1730\Projet2_Praya\Projet2_Praya\obj\Debug\Projet2_Praya.csprojAssemblyReference.cache
+C:\Users\pierp\Documents\ISIKA\Projet 2\.net\Projet2_Praya_v_0.6_real_20210109_1730\Projet2_Praya\Projet2_Praya\obj\Debug\Projet2_Praya.csproj.CoreCompileInputs.cache
+C:\Users\pierp\Documents\ISIKA\Projet 2\.net\Projet2_Praya_v_0.6_real_20210109_1730\Projet2_Praya\Projet2_Praya\obj\Debug\Projet2_Praya.csproj.CopyComplete
+C:\Users\pierp\Documents\ISIKA\Projet 2\.net\Projet2_Praya_v_0.6_real_20210109_1730\Projet2_Praya\Projet2_Praya\obj\Debug\Projet2_Praya.dll
+C:\Users\pierp\Documents\ISIKA\Projet 2\.net\Projet2_Praya_v_0.6_real_20210109_1730\Projet2_Praya\Projet2_Praya\obj\Debug\Projet2_Praya.pdb
+C:\Users\roman\Documents\ISIKA\Projet2PrayaFinal\Projet2_Praya\Projet2_Praya\bin\Projet2_Praya.dll.config
+C:\Users\roman\Documents\ISIKA\Projet2PrayaFinal\Projet2_Praya\Projet2_Praya\bin\Projet2_Praya.dll
+C:\Users\roman\Documents\ISIKA\Projet2PrayaFinal\Projet2_Praya\Projet2_Praya\bin\Projet2_Praya.pdb
+C:\Users\roman\Documents\ISIKA\Projet2PrayaFinal\Projet2_Praya\Projet2_Praya\bin\roslyn\csc.exe
+C:\Users\roman\Documents\ISIKA\Projet2PrayaFinal\Projet2_Praya\Projet2_Praya\bin\roslyn\csc.exe.config
+C:\Users\roman\Documents\ISIKA\Projet2PrayaFinal\Projet2_Praya\Projet2_Praya\bin\roslyn\csc.rsp
+C:\Users\roman\Documents\ISIKA\Projet2PrayaFinal\Projet2_Praya\Projet2_Praya\bin\roslyn\csi.exe
+C:\Users\roman\Documents\ISIKA\Projet2PrayaFinal\Projet2_Praya\Projet2_Praya\bin\roslyn\csi.rsp
+C:\Users\roman\Documents\ISIKA\Projet2PrayaFinal\Projet2_Praya\Projet2_Praya\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\roman\Documents\ISIKA\Projet2PrayaFinal\Projet2_Praya\Projet2_Praya\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\roman\Documents\ISIKA\Projet2PrayaFinal\Projet2_Praya\Projet2_Praya\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\roman\Documents\ISIKA\Projet2PrayaFinal\Projet2_Praya\Projet2_Praya\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\roman\Documents\ISIKA\Projet2PrayaFinal\Projet2_Praya\Projet2_Praya\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\roman\Documents\ISIKA\Projet2PrayaFinal\Projet2_Praya\Projet2_Praya\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\roman\Documents\ISIKA\Projet2PrayaFinal\Projet2_Praya\Projet2_Praya\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\roman\Documents\ISIKA\Projet2PrayaFinal\Projet2_Praya\Projet2_Praya\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\roman\Documents\ISIKA\Projet2PrayaFinal\Projet2_Praya\Projet2_Praya\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\roman\Documents\ISIKA\Projet2PrayaFinal\Projet2_Praya\Projet2_Praya\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\roman\Documents\ISIKA\Projet2PrayaFinal\Projet2_Praya\Projet2_Praya\bin\roslyn\System.AppContext.dll
+C:\Users\roman\Documents\ISIKA\Projet2PrayaFinal\Projet2_Praya\Projet2_Praya\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\roman\Documents\ISIKA\Projet2PrayaFinal\Projet2_Praya\Projet2_Praya\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\roman\Documents\ISIKA\Projet2PrayaFinal\Projet2_Praya\Projet2_Praya\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\roman\Documents\ISIKA\Projet2PrayaFinal\Projet2_Praya\Projet2_Praya\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\roman\Documents\ISIKA\Projet2PrayaFinal\Projet2_Praya\Projet2_Praya\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\roman\Documents\ISIKA\Projet2PrayaFinal\Projet2_Praya\Projet2_Praya\bin\roslyn\vbc.exe
+C:\Users\roman\Documents\ISIKA\Projet2PrayaFinal\Projet2_Praya\Projet2_Praya\bin\roslyn\vbc.exe.config
+C:\Users\roman\Documents\ISIKA\Projet2PrayaFinal\Projet2_Praya\Projet2_Praya\bin\roslyn\vbc.rsp
+C:\Users\roman\Documents\ISIKA\Projet2PrayaFinal\Projet2_Praya\Projet2_Praya\bin\roslyn\VBCSCompiler.exe
+C:\Users\roman\Documents\ISIKA\Projet2PrayaFinal\Projet2_Praya\Projet2_Praya\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\roman\Documents\ISIKA\Projet2PrayaFinal\Projet2_Praya\Projet2_Praya\bin\EntityFramework.dll
+C:\Users\roman\Documents\ISIKA\Projet2PrayaFinal\Projet2_Praya\Projet2_Praya\bin\EntityFramework.SqlServer.dll
+C:\Users\roman\Documents\ISIKA\Projet2PrayaFinal\Projet2_Praya\Projet2_Praya\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\roman\Documents\ISIKA\Projet2PrayaFinal\Projet2_Praya\Projet2_Praya\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\roman\Documents\ISIKA\Projet2PrayaFinal\Projet2_Praya\Projet2_Praya\bin\MySql.Data.dll
+C:\Users\roman\Documents\ISIKA\Projet2PrayaFinal\Projet2_Praya\Projet2_Praya\bin\MySql.Data.Entity.EF6.dll
+C:\Users\roman\Documents\ISIKA\Projet2PrayaFinal\Projet2_Praya\Projet2_Praya\bin\PagedList.dll
+C:\Users\roman\Documents\ISIKA\Projet2PrayaFinal\Projet2_Praya\Projet2_Praya\bin\PagedList.Mvc.dll
+C:\Users\roman\Documents\ISIKA\Projet2PrayaFinal\Projet2_Praya\Projet2_Praya\bin\System.Web.Helpers.dll
+C:\Users\roman\Documents\ISIKA\Projet2PrayaFinal\Projet2_Praya\Projet2_Praya\bin\System.Web.Mvc.dll
+C:\Users\roman\Documents\ISIKA\Projet2PrayaFinal\Projet2_Praya\Projet2_Praya\bin\System.Web.Razor.dll
+C:\Users\roman\Documents\ISIKA\Projet2PrayaFinal\Projet2_Praya\Projet2_Praya\bin\System.Web.Webpages.Deployment.dll
+C:\Users\roman\Documents\ISIKA\Projet2PrayaFinal\Projet2_Praya\Projet2_Praya\bin\System.Web.Webpages.dll
+C:\Users\roman\Documents\ISIKA\Projet2PrayaFinal\Projet2_Praya\Projet2_Praya\bin\System.Web.Webpages.Razor.dll
+C:\Users\roman\Documents\ISIKA\Projet2PrayaFinal\Projet2_Praya\Projet2_Praya\bin\EntityFramework.xml
+C:\Users\roman\Documents\ISIKA\Projet2PrayaFinal\Projet2_Praya\Projet2_Praya\bin\EntityFramework.SqlServer.xml
+C:\Users\roman\Documents\ISIKA\Projet2PrayaFinal\Projet2_Praya\Projet2_Praya\bin\MySql.Data.xml
+C:\Users\roman\Documents\ISIKA\Projet2PrayaFinal\Projet2_Praya\Projet2_Praya\bin\MySql.Data.Entity.EF6.xml
+C:\Users\roman\Documents\ISIKA\Projet2PrayaFinal\Projet2_Praya\Projet2_Praya\bin\PagedList.xml
+C:\Users\roman\Documents\ISIKA\Projet2PrayaFinal\Projet2_Praya\Projet2_Praya\bin\PagedList.Mvc.xml
+C:\Users\roman\Documents\ISIKA\Projet2PrayaFinal\Projet2_Praya\Projet2_Praya\bin\System.Web.Razor.xml
+C:\Users\roman\Documents\ISIKA\Projet2PrayaFinal\Projet2_Praya\Projet2_Praya\bin\System.Web.Webpages.xml
+C:\Users\roman\Documents\ISIKA\Projet2PrayaFinal\Projet2_Praya\Projet2_Praya\bin\System.Web.Webpages.Deployment.xml
+C:\Users\roman\Documents\ISIKA\Projet2PrayaFinal\Projet2_Praya\Projet2_Praya\bin\System.Web.Webpages.Razor.xml
+C:\Users\roman\Documents\ISIKA\Projet2PrayaFinal\Projet2_Praya\Projet2_Praya\bin\System.Web.Helpers.xml
+C:\Users\roman\Documents\ISIKA\Projet2PrayaFinal\Projet2_Praya\Projet2_Praya\bin\System.Web.Mvc.xml
+C:\Users\roman\Documents\ISIKA\Projet2PrayaFinal\Projet2_Praya\Projet2_Praya\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\roman\Documents\ISIKA\Projet2PrayaFinal\Projet2_Praya\Projet2_Praya\bin\fr\EntityFramework.resources.dll
+C:\Users\roman\Documents\ISIKA\Projet2PrayaFinal\Projet2_Praya\Projet2_Praya\bin\fr\EntityFramework.SqlServer.resources.dll
+C:\Users\roman\Documents\ISIKA\Projet2PrayaFinal\Projet2_Praya\Projet2_Praya\bin\fr\System.Web.Razor.resources.dll
+C:\Users\roman\Documents\ISIKA\Projet2PrayaFinal\Projet2_Praya\Projet2_Praya\bin\fr\System.Web.Webpages.resources.dll
+C:\Users\roman\Documents\ISIKA\Projet2PrayaFinal\Projet2_Praya\Projet2_Praya\bin\fr\System.Web.Webpages.Deployment.resources.dll
+C:\Users\roman\Documents\ISIKA\Projet2PrayaFinal\Projet2_Praya\Projet2_Praya\bin\fr\System.Web.Webpages.Razor.resources.dll
+C:\Users\roman\Documents\ISIKA\Projet2PrayaFinal\Projet2_Praya\Projet2_Praya\bin\fr\System.Web.Helpers.resources.dll
+C:\Users\roman\Documents\ISIKA\Projet2PrayaFinal\Projet2_Praya\Projet2_Praya\bin\fr\System.Web.Mvc.resources.dll
+C:\Users\roman\Documents\ISIKA\Projet2PrayaFinal\Projet2_Praya\Projet2_Praya\obj\Debug\Projet2_Praya.csprojAssemblyReference.cache
+C:\Users\roman\Documents\ISIKA\Projet2PrayaFinal\Projet2_Praya\Projet2_Praya\obj\Debug\Projet2_Praya.csproj.CoreCompileInputs.cache
+C:\Users\roman\Documents\ISIKA\Projet2PrayaFinal\Projet2_Praya\Projet2_Praya\obj\Debug\Projet2_Praya.csproj.CopyComplete
+C:\Users\roman\Documents\ISIKA\Projet2PrayaFinal\Projet2_Praya\Projet2_Praya\obj\Debug\Projet2_Praya.dll
+C:\Users\roman\Documents\ISIKA\Projet2PrayaFinal\Projet2_Praya\Projet2_Praya\obj\Debug\Projet2_Praya.pdb

@@ -1,0 +1,226 @@
+﻿@model Projet2_Praya.Models.don
+@{
+    ViewBag.Title = "Don";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-8"></div>
+        <div class="col-4">
+            <br />
+            <a class="bouton" href="/Catalogue/VueProjet/@Model.id_projet">Retour sur le détail du Projet</a>
+        </div>
+    </div>
+</div>
+
+
+
+<section>
+    <div class="m-md-2" id="videPetit">
+        <h2>
+            Vous aimez ce projet ? Contribuez-y
+        </h2>
+    </div>
+</section>
+
+
+@if (ViewBag.monprojet != null)
+{
+<hr />
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-2"></div>
+            <div class="col-8 text-center">Libelle : @ViewBag.monprojet.libelle</div>
+            <div class="col-2"></div>
+        </div>
+        <hr />
+    </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-3"></div>
+            <div class="col-3">
+                <div class="justify-content-center">
+                    Montant souhaité : @ViewBag.monprojet.montant_attendu
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="justify-content-center">
+                    Cagnotte : @ViewBag.monprojet.montant_collecte
+                </div>
+            </div>
+            <div class="col-3"></div>
+        </div>
+        <hr />
+    </div>
+    <div class="container">
+        @if (ViewBag.monmedia != -1)
+        {
+
+            <div>
+                <img src="@Url.Action("GetMedia", new { id = ViewBag.monmedia })" class="rounded mx-auto d-block" height="400" width="660" />
+            </div>
+        }
+        else
+        {
+            <div class="justify-content-center">Pas d'image principale pour le projet</div>
+        }
+    </div>
+ 
+
+}
+
+        
+
+
+
+        @using (Html.BeginForm())
+        {
+
+            <div style="display:none">
+
+                @Html.TextBoxFor(model => model.id_projet)
+
+            </div>
+
+            <div class="p-md-4"></div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-3"></div>
+                    <div class="col-2">
+                        <div class="row justify-content-lg-end">
+                            <label>E-Mail</label>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div>
+
+                            @Html.TextBoxFor(model => model.email)
+                            @Html.ValidationMessageFor(model => model.email)
+
+                        </div>
+                    </div>
+                    <div class="col-5"></div>
+
+                    <div class="col-3"></div>
+                    <div class="col-2">
+                        <div class="row justify-content-lg-end">
+                            <label>Votre prénom (Optionnel)</label>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div>
+                            <div class="w-100"></div>
+
+                            @Html.TextBoxFor(model => model.prenom)
+                            @Html.ValidationMessageFor(model => model.prenom)
+
+                        </div>
+                    </div>
+                    <div class="col-5"></div>
+
+                    <div class="col-3"></div>
+                    <div class="col-2">
+                        <div class="row justify-content-lg-end">
+                            <label>Votre nom (Optionnel)</label>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div>
+                            <div class="w-100"></div>
+
+                            @Html.TextBoxFor(model => model.nom)
+                            @Html.ValidationMessageFor(model => model.nom)
+
+                        </div>
+                    </div>
+                    <div class="col-5"></div>
+
+                    <div class="col-3"></div>
+                    <div class="col-2">
+                        <div class="row justify-content-lg-end">
+                            <label>Le montant de votre don</label>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div>
+                            <div class="w-100"></div>
+
+                            @Html.TextBoxFor(model => model.montant)
+                            @Html.ValidationMessageFor(model => model.montant)
+
+                        </div>
+                    </div>
+                    <div class="col-5"></div>
+
+                    <div class="col-3"></div>
+                    <div class="col-2">
+                        <div class="row justify-content-lg-end">
+                            <label>Carte Bancaire</label>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div>
+                            <div class="w-100"></div>
+
+                            <input type="text" name="CarteBancaire" required minlength="16" maxlength="16" size="20">
+
+                        </div>
+                    </div>
+                    <div class="col-5"></div>
+
+                    <div class="col-3"></div>
+                    <div class="col-2">
+                        <div class="row justify-content-lg-end">
+                            <label>Date d'expiration</label>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div>
+                            <div class="w-100"></div>
+
+                            <input type="text" name="name" required minlength="5" maxlength="5" size="10">
+
+
+                        </div>
+                    </div>
+                    <div class="col-5"></div>
+
+                    <div class="col-3"></div>
+                    <div class="col-2">
+                        <div class="row justify-content-lg-end">
+                            <label>Code de Verification</label>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div>
+                            <div class="w-100"></div>
+
+                            <input type="text" name="name" required minlength="3" maxlength="3" size="10">
+
+                        </div>
+                    </div>
+                    <div class="col-5"></div>
+                </div>
+            </div>
+            <br />
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-5"></div>
+                    <div class="col-2">
+                        <div class="row justify-content-center">
+
+                            <input class="boutonInput" type="submit" value="Soutenez ce projet !" />
+
+                        </div>
+                    </div>
+                    <div class="col-5"></div>
+                </div>
+            </div>
+        }
+
+
+        <div class="vide"></div>
+

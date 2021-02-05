@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a340a6fdaf5e4cb6bcc48065138eef33" Name="Diagram1">
+        <EntityTypeShape EntityType="projet2Model.administrateur" Width="1.5" PointX="0.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="projet2Model.agendum" Width="1.5" PointX="16.25" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="projet2Model.association" Width="1.5" PointX="0.75" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="projet2Model.don" Width="1.5" PointX="9.75" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="projet2Model.donateur" Width="1.5" PointX="14" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="projet2Model.espace_utilisateur" Width="1.5" PointX="14" PointY="15.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="projet2Model.evenement" Width="1.5" PointX="18.5" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="projet2Model.facture" Width="1.5" PointX="9.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="projet2Model.justificatif" Width="1.5" PointX="12" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="projet2Model.medium" Width="1.5" PointX="9.75" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="projet2Model.message" Width="1.5" PointX="0.75" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="projet2Model.notification" Width="1.5" PointX="16.25" PointY="17.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="projet2Model.porfefeuille_factures" Width="1.5" PointX="12" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="projet2Model.portefeuille_projet" Width="1.5" PointX="5.25" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="projet2Model.preference" Width="1.5" PointX="16.25" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="projet2Model.profil" Width="1.5" PointX="16.25" PointY="20.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="projet2Model.projet" Width="1.5" PointX="7.5" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="projet2Model.rendez_vous" Width="1.5" PointX="18.5" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="projet2Model.resp_projet" Width="1.5" PointX="3" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="projet2Model.type_projet" Width="1.5" PointX="5.25" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="projet2Model.utilisateur" Width="1.5" PointX="11.75" PointY="13.875" IsExpanded="true" />
+        <AssociationConnector Association="projet2Model.fk_agenda_email" ManuallyRouted="false" />
+        <AssociationConnector Association="projet2Model.fk_evenement_agenda" ManuallyRouted="false" />
+        <AssociationConnector Association="projet2Model.fk_rdv_agenda" ManuallyRouted="false" />
+        <AssociationConnector Association="projet2Model.fk_respproj_association" ManuallyRouted="false" />
+        <AssociationConnector Association="projet2Model.fk_don_projet" ManuallyRouted="false" />
+        <AssociationConnector Association="projet2Model.fk_justificatif_don" ManuallyRouted="false" />
+        <AssociationConnector Association="projet2Model.fk_portefeulle_don" ManuallyRouted="false" />
+        <AssociationConnector Association="projet2Model.fk_donateur_utilisateurl" ManuallyRouted="false" />
+        <AssociationConnector Association="projet2Model.fk_preference_donateur" ManuallyRouted="false" />
+        <AssociationConnector Association="projet2Model.fk_espace_user" ManuallyRouted="false" />
+        <AssociationConnector Association="projet2Model.fk_notif_espace" ManuallyRouted="false" />
+        <AssociationConnector Association="projet2Model.fk_profile_espace" ManuallyRouted="false" />
+        <AssociationConnector Association="projet2Model.fk_portefeuille_facture" ManuallyRouted="false" />
+        <AssociationConnector Association="projet2Model.fk_media_projet" ManuallyRouted="false" />
+        <AssociationConnector Association="projet2Model.fk_portfeuille_responsable" ManuallyRouted="false" />
+        <AssociationConnector Association="projet2Model.fk_projet_portefeuille" ManuallyRouted="false" />
+        <AssociationConnector Association="projet2Model.fk_projet_type" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
